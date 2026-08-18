@@ -1,0 +1,495 @@
+:root {
+  --bg: #f3f2ed;
+  --ink: #171717;
+  --muted: #6d6c66;
+  --line: #c9c7bf;
+  --soft: #e7e5de;
+  --max: 1680px;
+  --pad: clamp(20px, 3vw, 48px);
+  --label: 168px;
+  --gap: clamp(28px, 4vw, 72px);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.48;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover { opacity: .58; }
+
+.page-shell {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.site-header {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid var(--line);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  letter-spacing: .01em;
+}
+
+.brand { font-weight: 500; }
+
+.nav {
+  display: flex;
+  gap: clamp(18px, 3vw, 40px);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: var(--label) minmax(0, 1fr);
+  gap: var(--gap);
+  padding: clamp(56px, 7vw, 112px) 0;
+}
+
+.ruled { border-top: 1px solid var(--line); }
+
+.side-label,
+.eyebrow,
+.project-kicker,
+.number,
+.tools span,
+.date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.side-label {
+  color: var(--muted);
+  padding-top: 5px;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.hero {
+  min-height: min(760px, calc(100vh - 84px));
+  align-items: start;
+}
+
+.hero-content {
+  max-width: 1050px;
+  padding-top: clamp(18px, 5vw, 80px);
+}
+
+.eyebrow {
+  color: var(--muted);
+  margin: 0 0 26px;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 30px;
+  max-width: 980px;
+  font-size: clamp(46px, 5.4vw, 82px);
+  line-height: .98;
+  letter-spacing: -.045em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(32px, 3.3vw, 50px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  font-weight: 500;
+}
+
+.lead {
+  max-width: 760px;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.32;
+  color: #343430;
+}
+
+.meta-row {
+  margin-top: clamp(40px, 7vw, 84px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 360px);
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 44px;
+}
+
+.section-heading h2,
+.section-heading p { margin-bottom: 0; }
+
+.section-heading p { color: var(--muted); }
+
+.project-list {
+  display: grid;
+  gap: 64px;
+}
+
+.project-card {
+  display: block;
+}
+
+.project-media {
+  width: 100%;
+  aspect-ratio: 16 / 8.6;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.media-placeholder {
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.media-placeholder::after {
+  content: "";
+  width: 38%;
+  aspect-ratio: 4/3;
+  border: 1px solid var(--ink);
+  background: var(--bg);
+}
+
+.media-placeholder span {
+  position: absolute;
+  z-index: 1;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  background: var(--bg);
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr auto;
+  gap: 28px;
+  padding-top: 20px;
+}
+
+.project-kicker {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.project-info h3 { margin: 0; }
+
+.project-summary {
+  color: var(--muted);
+  margin: 0;
+  max-width: 460px;
+}
+
+.arrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+}
+
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ink);
+}
+
+.capability {
+  min-height: 300px;
+  padding: 18px 26px 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.capability + .capability {
+  padding-left: 26px;
+  border-left: 1px solid var(--line);
+}
+
+.capability p { color: var(--muted); }
+
+.number {
+  display: inline-block;
+  color: var(--muted);
+  margin-bottom: 64px;
+}
+
+.tools {
+  margin: 28px 0 0;
+  color: var(--muted);
+}
+
+.tools span {
+  color: var(--ink);
+  margin-right: 10px;
+}
+
+.experience-list {
+  border-top: 1px solid var(--ink);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: minmax(180px, .9fr) 1.5fr 130px;
+  gap: 26px;
+  padding: 22px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-item h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+}
+
+.experience-item p { margin: 0; }
+
+.experience-item > div p,
+.experience-copy,
+.muted-row { color: var(--muted); }
+
+.date { text-align: right; color: var(--muted); }
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--ink);
+}
+
+blockquote {
+  margin: 0;
+  padding: 28px 34px 34px 0;
+}
+
+blockquote + blockquote {
+  border-left: 1px solid var(--line);
+  padding-left: 34px;
+}
+
+blockquote p {
+  font-size: clamp(25px, 2.5vw, 38px);
+  line-height: 1.13;
+  letter-spacing: -.025em;
+}
+
+blockquote footer {
+  margin-top: 64px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.link-list { border-top: 1px solid var(--ink); }
+
+.link-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.link-list a span:last-child {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
+
+.contact .section-content { max-width: 1000px; }
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 52px;
+}
+
+.contact-links a {
+  border: 1px solid var(--ink);
+  padding: 10px 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
+
+.footer {
+  min-height: 100px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1600px) {
+  :root { --label: 190px; }
+  .project-media { aspect-ratio: 16 / 7.8; }
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --label: 126px;
+    --gap: 38px;
+  }
+  .section-heading { grid-template-columns: 1fr; gap: 12px; }
+  .capabilities { grid-template-columns: 1fr; }
+  .capability,
+  .capability + .capability {
+    border-left: 0;
+    padding: 22px 0 30px;
+    min-height: 0;
+  }
+  .number { margin-bottom: 32px; }
+}
+
+@media (max-width: 767px) {
+  :root { --pad: 20px; }
+
+  body { font-size: 16px; }
+
+  .site-header {
+    min-height: 70px;
+  }
+
+  .nav a:nth-child(2),
+  .nav a:nth-child(3) {
+    display: none;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 56px 0 64px;
+  }
+
+  .side-label {
+    position: static;
+    padding: 0 0 14px;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .hero {
+    min-height: calc(100svh - 70px);
+    align-content: start;
+  }
+
+  .hero .side-label { display: none; }
+
+  .hero-content { padding-top: 24px; }
+
+  h1 {
+    font-size: clamp(43px, 13vw, 58px);
+    max-width: 10ch;
+    margin-bottom: 28px;
+  }
+
+  .lead {
+    font-size: 19px;
+  }
+
+  .meta-row {
+    display: grid;
+    gap: 8px;
+    margin-top: 48px;
+  }
+
+  .project-list { gap: 46px; }
+
+  .project-media { aspect-ratio: 4 / 3; }
+
+  .project-info {
+    grid-template-columns: 1fr auto;
+    gap: 10px 16px;
+  }
+
+  .project-summary {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .arrow { grid-column: 2; grid-row: 1; }
+
+  .capabilities { display: block; }
+
+  .experience-item {
+    grid-template-columns: 1fr auto;
+    gap: 12px 18px;
+  }
+
+  .experience-copy {
+    grid-column: 1 / -1;
+  }
+
+  .date {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .quote-grid { grid-template-columns: 1fr; }
+
+  blockquote,
+  blockquote + blockquote {
+    padding: 24px 0 28px;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  blockquote footer { margin-top: 40px; }
+
+  .link-list a { align-items: baseline; }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root { --pad: 16px; }
+  h1 { font-size: 42px; }
+  .brand { max-width: 120px; }
+}

@@ -1,0 +1,10 @@
+{
+  "notion": {
+    "rootPageId": "f5651ed0-e691-4d0a-aa1b-8f546a9e5444",
+    "caseStudiesDataSource": "collection://01f45688-dbbd-480f-82b6-0f8de41f9961",
+    "earlierProductWorkDataSource": "collection://4f48fdec-2d78-40ee-af8c-2d198ccc600f",
+    "recommendationsDataSource": "collection://a4aba448-1c60-4bd3-b153-fa7d6656250b",
+    "outsideWorkDataSource": "collection://8a6ce7cf-1335-41d1-b769-8c4226578d8a"
+  },
+  "note": "IDs copied from the connected Notion workspace. Store API credentials only in environment variables, never here."
+}
