@@ -201,7 +201,7 @@ h3 {
 }
 
 .more-cases-details { margin-top: 28px; }
-.more-cases-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
+.more-cases-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
 .more-cases-details summary::-webkit-details-marker { display: none; }
 .more-cases-summary-text { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .18em; transition: text-decoration-color .18s ease; }
 .more-cases-details summary:hover .more-cases-summary-text,
@@ -531,7 +531,7 @@ h3 {
 }
 
 .recommendations-details { margin-top: 28px; }
-.recommendations-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
+.recommendations-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
 .recommendations-details summary::-webkit-details-marker { display: none; }
 .recommendations-summary-text { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .18em; transition: text-decoration-color .18s ease; }
 .recommendations-details summary:hover .recommendations-summary-text,
