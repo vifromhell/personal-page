@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Building Accessibility into Muse Design Systems — Vitaliy Kapustyanov</title>
+  <meta name="description" content="I helped turn accessibility from a fragmented product concern into a repeatable framework for auditing products, defining ownership, and embedding requirements into the Design System." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="case-header-start">
+        <a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a>
+        <a class="brand" href="../index.html">Vitaliy Kapustyanov</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation"><a href="../index.html#work">Work</a></nav>
+    </header>
+    <main>
+      <section class="section-grid case-hero">
+        <div class="side-label">CASE STUDY</div>
+        <div class="case-hero-content">
+          <p class="eyebrow">Muse · Accessibility · Design systems</p>
+          <h1>Building Accessibility into Muse Design Systems</h1>
+          <p class="case-lead">I helped turn accessibility from a fragmented product concern into a repeatable framework for auditing products, defining ownership, and embedding requirements into the Design System.</p>
+          <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design Systems Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Muse products · Web</span></span><span class="case-meta-item"><span class="case-meta-label">Outcome</span><span class="case-meta-value">A repeatable accessibility practice</span></span></div>
+        </div>
+      </section>
+      <section class="section-grid ruled case-section">
+        <div class="side-label">CONTEXT</div>
+        <div class="case-copy">
+          <h2>Case thesis</h2>
+          <p><strong>How I helped turn accessibility from a fragmented product concern into a repeatable framework for auditing products, defining ownership, and embedding accessibility requirements into the Design System.</strong></p>
+<p>The work began before accessibility became a company priority and grew from baseline audits into strategy, system changes, manual assistive-technology testing, and follow-up evaluation.</p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">OVERVIEW</div>
+        <div class="case-copy">
+          <h2>At a glance</h2>
+          <ul><li><strong>Role:</strong> Design Systems Designer</li><li><strong>Timeline:</strong> 2023–2025</li><li><strong>Scope:</strong> research, audits, strategy, Design System foundations, manual testing</li><li><strong>Products:</strong> MuseScore, Ultimate Guitar, Audio.com, and selected Muse web properties</li><li><strong>Baseline:</strong> 2 core products · 8 high-traffic pages · 7 evaluation tools · 3 normalized issue groups</li></ul>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">CHALLENGE</div>
+        <div class="case-copy">
+          <h2>01 — Accessibility existed as a concern, but not as a system</h2>
+          <p>When I started, there was no shared view of how accessible the key products were, which standards mattered most, or who should own different classes of issues.</p>
+<p>I first needed a baseline: not just a count of errors, but a picture of which accessibility problems repeated across products.</p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">STRATEGY</div>
+        <div class="case-copy">
+          <h2>02 — Establishing a baseline</h2>
+          <p>I audited eight high-traffic pages across <strong>MuseScore and Ultimate Guitar</strong> using seven accessibility tools from the W3C evaluation tools directory: Lighthouse, WAVE, ARC Toolkit, Siteimprove, IBM Equal Access, Accessible Web, and Axe.</p>
+<p>The tools used different terminology and scoring, so their raw counts were not directly comparable. I mapped overlapping findings into three shared groups: <strong>Textual accessibility, Visual accessibility, and Controls &amp; navigation</strong>.</p>
+<p>This made the results usable across products. <strong>Visual accessibility consistently emerged as the main shared problem area</strong>, while Ultimate Guitar also showed notable issues around controls and navigation.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/01-mobile.webp" width="720" height="862" /><img src="../assets/cases/muse-accessibility/01.webp" alt="Accessibility audit baseline across MuseScore and Ultimate Guitar" loading="lazy" srcset="../assets/cases/muse-accessibility/01-960.webp 960w, ../assets/cases/muse-accessibility/01-1600.webp 1600w, ../assets/cases/muse-accessibility/01.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="992" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ARCHITECTURE</div>
+        <div class="case-copy">
+          <h2>03 — Turning findings into a strategy</h2>
+          <p>The audit identified problems, but not how the organization should act on them. I turned the research into an accessibility strategy with <strong>WCAG AA as the primary target</strong> and relevant AAA criteria as a longer-term direction where practical.</p>
+<p>The strategy defined four operational areas:</p>
+<ul><li><strong>Target:</strong> what level we were aiming for</li><li><strong>Ownership:</strong> Design Systems, Product, Engineering, and Content responsibilities</li><li><strong>Priority areas:</strong> contrast, components, navigation, semantics, and related product issues</li><li><strong>Process:</strong> research → prioritize → implement → test</li></ul>
+<p>I proposed two parallel tracks: fix issues in existing interfaces while embedding accessibility requirements into cores and component libraries to prevent the same classes of problems from reappearing.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/02-mobile.webp" width="720" height="828" /><img src="../assets/cases/muse-accessibility/02.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-accessibility/02-960.webp 960w, ../assets/cases/muse-accessibility/02-1600.webp 1600w, ../assets/cases/muse-accessibility/02.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="948" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DECISION</div>
+        <div class="case-copy">
+          <h2>04 — Embedding accessibility into the Design System</h2>
+          <p>Contrast was one of the most persistent findings. Rather than fixing it repeatedly screen by screen, I moved part of the solution into the <strong>Ultimate Guitar Web Core</strong>.</p>
+<p>I audited semantic colors across their actual light/dark contexts and use cases for normal text, large text, and graphics. I adjusted failing combinations toward <strong>AA as the minimum target</strong>, using AAA where the visual change was practical. The updated values were implemented in Web Core, then propagated through the component library and into production.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/03-mobile.webp" width="720" height="1498" /><img src="../assets/cases/muse-accessibility/03.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-accessibility/03-960.webp 960w, ../assets/cases/muse-accessibility/03-1600.webp 1600w, ../assets/cases/muse-accessibility/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1366" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">EXECUTION</div>
+        <div class="case-copy">
+          <h2>05 — Testing beyond automated tools</h2>
+          <p>Automated checks could identify standards violations, but not how difficult a real task might be with assistive technology. I therefore ran a manual <strong>VoiceOver</strong> evaluation of the redesigned Ultimate Guitar Tab page across ten task scenarios.</p>
+<p>The recurring problems were about <strong>reachability, focus recovery, control clarity, and navigation flow</strong>. Some controls were understandable once focused but difficult to reach or leave, and moving between sections was often harder than interacting with an individual control.</p>
+<blockquote><p>This was an expert evaluation, not usability testing with experienced screen-reader users. I recommended validating the findings further with people who rely on assistive technologies in everyday use.</p></blockquote>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/04-mobile.webp" width="720" height="1498" /><img src="../assets/cases/muse-accessibility/04.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-accessibility/04-960.webp 960w, ../assets/cases/muse-accessibility/04-1600.webp 1600w, ../assets/cases/muse-accessibility/04.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1434" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">GOVERNANCE</div>
+        <div class="case-copy">
+          <h2>06 — From a design initiative to a company priority</h2>
+          <p>When I first presented the strategy, accessibility was accepted as a direction but was not yet urgent. That changed when the <strong>European Accessibility Act</strong> became a practical regulatory and business concern.</p>
+<p>By then, the baseline, target levels, ownership model, design/frontend requirements, prioritization principles, and testing approach already existed. Accessibility became a company-level objective, responsibilities were assigned, and an implementation backlog was created using the research as a foundation.</p>
+<p>Ownership then expanded beyond the Design System. Product and Engineering planned the technical implementation themselves while I continued reviewing contrast, foundations, component libraries, and design work. The initiative no longer depended on my constant involvement.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/05-mobile.webp" width="720" height="1060" /><img src="../assets/cases/muse-accessibility/05.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-accessibility/05-960.webp 960w, ../assets/cases/muse-accessibility/05-1600.webp 1600w, ../assets/cases/muse-accessibility/05.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1698" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ADOPTION</div>
+        <div class="case-copy">
+          <h2>07 — Follow-up audit</h2>
+          <p>In 2025, I repeated the audit and expanded it to <strong>seven Muse web properties</strong>, including MuseScore, Ultimate Guitar, <a href="https://Audio.com" target="_blank" rel="noreferrer">Audio.com</a>, Sheet Music Plus, Sheet Music Direct, <a href="https://Audacityteam.org" target="_blank" rel="noreferrer">Audacityteam.org</a>, and <a href="https://Musescore.org" target="_blank" rel="noreferrer">Musescore.org</a>.</p>
+<p>For MuseScore and Ultimate Guitar I preserved comparisons with the earlier checks. The figures are useful as <strong>directional evidence</strong>, not as proof of WCAG compliance or as outcomes attributable solely to my work. The follow-up also surfaced newer categories such as touch-target sizing, ARIA, list structure, captions, and landmarks.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-accessibility/06-mobile.webp" width="720" height="1406" /><img src="../assets/cases/muse-accessibility/06.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-accessibility/06-960.webp 960w, ../assets/cases/muse-accessibility/06-1600.webp 1600w, ../assets/cases/muse-accessibility/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1582" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">IMPACT</div>
+        <div class="case-copy">
+          <h2>08 — From an audit to a repeatable practice</h2>
+          <p>The main outcome was not a single score or a claim of full WCAG compliance. It was a change in how accessibility could be approached.</p>
+<ul><li><strong>Measurable baseline:</strong> key products could be assessed and revisited over time.</li><li><strong>Shared target and ownership:</strong> WCAG direction and responsibilities were made explicit across functions.</li><li><strong>System-level prevention:</strong> accessibility requirements increasingly moved into foundations and component work instead of being handled only screen by screen.</li><li><strong>Broader validation:</strong> automated scans were complemented by manual VoiceOver testing.</li><li><strong>Sustainable process:</strong> Product and Engineering could continue implementation using the research and framework without constant individual ownership.</li></ul>
+<p><strong>Accessibility had become something the organization could repeatedly evaluate, discuss, and improve as a system.</strong></p>
+        </div>
+      </section>
+      <section class="section-grid ruled case-next">
+        <div class="side-label">NEXT CASE</div>
+        <div><p class="eyebrow">Muse · Architecture · Governance</p><a class="case-next-link" href="./muse-design-system.html"><span class="case-next-text">Scaling a Design System across six products</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a></div>
+      </section>
+    </main>
+    <footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+  </div>
+</body>
+</html>

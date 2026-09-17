@@ -4,7 +4,18 @@
     "caseStudiesDataSource": "collection://01f45688-dbbd-480f-82b6-0f8de41f9961",
     "earlierProductWorkDataSource": "collection://4f48fdec-2d78-40ee-af8c-2d198ccc600f",
     "recommendationsDataSource": "collection://a4aba448-1c60-4bd3-b153-fa7d6656250b",
-    "outsideWorkDataSource": "collection://8a6ce7cf-1335-41d1-b769-8c4226578d8a"
+    "outsideWorkDataSource": "collection://8a6ce7cf-1335-41d1-b769-8c4226578d8a",
+    "caseStudyPages": {
+      "museAccessibility": "3c81bcdbe8ce813291e8d301d150f96d",
+      "museDesignSystemScaling": "3c81bcdbe8ce81c1b2d8d4663dc94f8e",
+      "museIconSystem": "3c91bcdbe8ce813382e1f4e050876a1a",
+      "museSemanticColor": "3c91bcdbe8ce81bebabbf1a90711129f",
+      "cianContactSystem": "5216b03b3cdc4d88b8693925a1f78ed3",
+      "cianIconSystem": "3b11bcdbe8ce81fd88f8dcee9838780b",
+      "cianSemanticColor": "1c9d84ae58c2496681aacb4a36d3be4f",
+      "cianProductAnalysis": "210951a76cfe4cc195761cc7d611fd8b",
+      "karunaDesignEcosystem": "d6094d8b9dd44a5e99a20abf3c422414"
+    }
   },
   "note": "IDs copied from the connected Notion workspace. Store API credentials only in environment variables, never here."
 }

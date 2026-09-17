@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Building a Cross-Platform Semantic Color System — Vitaliy Kapustyanov</title>
+  <meta name="description" content="I led a cross-platform audit that turned independently maintained primitive palettes into a shared semantic system—making existing color decisions understandable, predictable, and reusable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="case-header-start">
+        <a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a>
+        <a class="brand" href="../index.html">Vitaliy Kapustyanov</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation">
+        <a href="../index.html#work">Work</a>
+      </nav>
+    </header>
+    <main>
+      <section class="section-grid case-hero">
+        <div class="side-label">CASE STUDY</div>
+        <div class="case-hero-content">
+          <p class="eyebrow">Cian · Foundations · Design tokens</p>
+          <h1>Building a Cross-Platform Semantic Color System</h1>
+          <p class="case-lead">I led a cross-platform audit that turned independently maintained primitive palettes into a shared semantic system—making existing color decisions understandable, predictable, and reusable.</p>
+          <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design System Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">3 platforms</span></span><span class="case-meta-item"><span class="case-meta-label">Collaboration</span><span class="case-meta-value">Around 20 designers</span></span></div>
+        </div>
+      </section>
+      <section class="section-grid ruled case-section">
+        <div class="side-label">CONTEXT</div>
+        <div class="case-copy">
+          <h2>Summary</h2>
+          <p>Cian’s web, iOS, and Android libraries used similar but independently maintained color palettes. Most tokens were named as primitives such as <code>green50</code>, which described appearance but not purpose. The same token could represent several unrelated meanings, while similar meanings could also be expressed through different values.</p>
+<p>I initiated and led a cross-platform audit to turn this accumulated color logic into a shared semantic system. The goal was not to redesign the product visually, but to make existing decisions understandable, predictable, and reusable across platforms.</p>
+<p><strong>My role:</strong> Design System Designer — audit, semantic architecture, validation, and stakeholder alignment</p>
+<p><strong>3 platforms</strong> · <strong>Around 20 designers involved</strong> · <strong>5–7 design leads in core discussions</strong> · <strong>Implemented with minor adjustments</strong></p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">CHALLENGE</div>
+        <div class="case-copy">
+          <h2>The problem</h2>
+          <p>The product had evolved for many years across several teams and platforms. As a result:</p>
+<ul><li>primitive token names did not explain whether a color represented a status, an accent, an action, or something else;</li><li>the same color could be used for unrelated purposes;</li><li>similar purposes could use different colors without a clear reason;</li><li>web, iOS, and Android maintained separate palettes despite sharing a similar visual language;</li><li>interaction states existed inside components, but there was no consistent semantic model behind them.</li></ul>
+<p>The challenge was not to create a new palette from scratch, but to extract a coherent system from years of accumulated design decisions.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DISCOVERY</div>
+        <div class="case-copy">
+          <h2>Audit</h2>
+          <p>I reviewed color libraries, design files, and production interfaces across web, iOS, and Android.</p>
+<p>I placed large numbers of screens side by side and catalogued how each color was actually being used. Recurring patterns began to emerge around:</p>
+<ul><li>text and icons;</li><li>backgrounds and surfaces;</li><li>borders, dividers, and controls;</li><li>actions and buttons;</li><li>statuses such as success, warning, and error.</li></ul>
+<p>I first grouped similar cases, then isolated the outliers. Where several slightly different colors served the same purpose, I brought those differences back to the design team and worked through them case by case.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/semantic-color-system/01-mobile.webp" width="720" height="1808" /><img src="../assets/cases/semantic-color-system/01.webp" alt="Audit of color libraries and recurring usage patterns across platforms" loading="lazy" srcset="../assets/cases/semantic-color-system/01-960.webp 960w, ../assets/cases/semantic-color-system/01-1600.webp 1600w, ../assets/cases/semantic-color-system/01.webp 1612w" sizes="(max-width: 767px) 100vw, 75vw" width="1612" height="756" decoding="async" /></picture></figure>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DECISION</div>
+        <div class="case-copy">
+          <h2>From color values to semantic roles</h2>
+          <p>The new model changed the designer’s question from <strong>“Which shade should I use?”</strong> to <strong>“What role does this element perform?”</strong></p>
+<p>Instead of relying on primitive names, colors were organized by function.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/semantic-color-system/02-mobile.webp" width="720" height="2492" /><img src="../assets/cases/semantic-color-system/02.webp" alt="The semantic structure organized colors by their function in the interface rather than by hue." loading="lazy" srcset="../assets/cases/semantic-color-system/02.webp 800w" sizes="(max-width: 767px) 100vw, 75vw" width="800" height="403" decoding="async" /></picture></figure>
+<p>The system included semantic groups for text, icons, actions, surfaces, and edges, with explicit states such as <code>Default</code>, <code>Hovered</code>, <code>Pressed</code>, <code>Selected</code>, and <code>Disabled</code>.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/semantic-color-system/03-mobile.webp" width="720" height="934" /><img src="../assets/cases/semantic-color-system/03.webp" alt="A single primitive value could support several semantic roles without exposing the underlying color choice to designers." loading="lazy" srcset="../assets/cases/semantic-color-system/03.webp 800w" sizes="(max-width: 767px) 100vw, 75vw" width="800" height="320" decoding="async" /></picture></figure>
+<p>The final system contained more tokens than the original libraries because interaction states were made explicit. The goal was not to minimize the absolute token count, but to eliminate arbitrary choices and make every remaining token intentional.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">VALIDATION</div>
+        <div class="case-copy">
+          <h2>Validation on real product screens</h2>
+          <p>Once the core structure was stable, I first applied it to components on a separate working sheet.</p>
+<p>I then tested the system on one of the product’s most visually complex property pages in both Light and Dark themes. The page combined promotional blocks, imagery, accents, borders, inverted elements, and many different components, making it a useful stress test for whether the semantic roles could remain coherent across themes.</p>
+<figure class="case-figure"><img src="../assets/cases/semantic-color-system/04.webp" alt="The same complex property page shown in Light and Dark themes. Its density of components, promotional content, imagery, borders, and inverted elements made it a useful test of whether the semantic roles could hold together across themes." loading="lazy" srcset="../assets/cases/semantic-color-system/04.webp 801w" sizes="(max-width: 767px) 100vw, 75vw" width="801" height="989" decoding="async" /></figure>
+<p>The visible change was intentionally small: this was a systemic redesign without unnecessary visual redesign.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">COLLABORATION</div>
+        <div class="case-copy">
+          <h2>Alignment with the design team</h2>
+          <p>The hardest part was not defining the categories, but negotiating which visual differences were meaningful enough to preserve.</p>
+<p>Designers were often protective of subtle color nuances. I used concrete comparisons to show where a small visual adjustment could reduce unnecessary variation and make the system easier to maintain.</p>
+<p>For example, if several button variations could be expressed with two semantic roles instead of three unrelated values, that simplification became significant when repeated across the product.</p>
+<p>I also kept naming deliberately broad. A designer needed to know that an element was a primary action or a surface placed above another surface, not that it belonged to one narrowly defined marketing context.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">IMPACT</div>
+        <div class="case-copy">
+          <h2>Result</h2>
+          <p>I completed the architecture, aligned it with the design team, and documented the final structure before leaving the company.</p>
+<p>According to former colleagues, the system was implemented with minor adjustments and remains in use today.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">LESSONS</div>
+        <div class="case-copy">
+          <h2>Retrospective</h2>
+          <p>Some parts of the architecture reflected the conventions and constraints of that period.</p>
+<p>At the time, I treated <code>Light</code>, <code>Dark</code>, <code>Bright</code>, and <code>On Overlay</code> as parallel themes. <br>Today, I would model only Light and Dark as global themes. Saturated backgrounds and image overlays would be handled as local interface contexts inside the same semantic system rather than as independent themes.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/semantic-color-system/05-mobile.webp" width="720" height="992"><img src="../assets/cases/semantic-color-system/05.webp" alt="The original 2021 model treated four visual contexts as parallel themes. Today, I would separate global themes from local surface contexts." loading="lazy" srcset="../assets/cases/semantic-color-system/05.webp 800w" sizes="(max-width: 767px) 100vw, 75vw" width="800" height="276" decoding="async" /></picture></figure>
+<p>I would also reconsider some duplicated categories, such as separate Text and Icon groups, where a shared content-color model could be simpler.</p>
+<p>The value of this project is not that every naming decision remains timeless. It is that the work demonstrates how I audited an inconsistent system, identified recurring roles, negotiated constraints, and turned them into a coherent cross-platform model.</p>
+
+        </div>
+      </section>
+      <section class="section-grid ruled case-next">
+        <div class="side-label">NEXT CASE</div>
+        <div>
+          <p class="eyebrow">Cian · Components · Cross-platform</p>
+          <a class="case-next-link" href="./contact-system.html"><span class="case-next-text">Designing a Cross-Platform Contact System for Cian</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+  </div>
+</body>
+</html>

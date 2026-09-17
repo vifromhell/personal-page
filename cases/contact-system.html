@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Building a Shared Contact System for Cian — Vitaliy Kapustyanov</title>
+  <meta name="description" content="A design-system pilot that consolidated fragmented contact implementations into three shared, context-specific Contact Card variants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward,expand_more&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+<div class="page-shell">
+<header class="site-header"><div class="case-header-start"><a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a><a class="brand" href="../index.html">Vitaliy Kapustyanov</a></div><nav class="nav" aria-label="Case study navigation"><a href="../index.html#work">Work</a></nav></header>
+<main>
+<section class="section-grid case-hero">
+  <div class="side-label">CASE STUDY</div>
+  <div class="case-hero-content">
+    <p class="eyebrow">Cian · Components · Web</p>
+    <h1>Building a Shared Contact System for Cian</h1>
+    <p class="case-lead">What appeared to be a small contact block was actually a fragmented system maintained by several teams. I initiated and led a design-system pilot that consolidated these legacy implementations into one controllable and scalable contact system.</p>
+    <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design System Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Web + mobile adaptations</span></span><span class="case-meta-item"><span class="case-meta-label">Team</span><span class="case-meta-value">3 → 15 people</span></span></div>
+  </div>
+</section>
+
+<section class="section-grid ruled case-section"><div class="side-label">CONTEXT</div><div class="case-copy">
+  <h2>Summary</h2>
+  <p>What appeared to be a small contact block was actually a fragmented system maintained by several teams. I initiated and led a design-system pilot that consolidated these legacy implementations into one controllable and scalable contact system.</p>
+  <p>The system included three Contact Card variants named after their placement in the product: Snippet, Sidebar, and Inline. They used the same content model and interaction patterns while adapting their composition to different contexts and screen sizes.</p>
+  <p>The web components were released to production. I also prepared mobile app adaptations, but their later implementation status is unknown.</p>
+  <p><strong>My role:</strong> I initiated the project, mapped ownership across teams, gathered requirements, facilitated the working group, and designed and documented the system through its web release.</p>
+  <p><strong>Cross-team initiative</strong> · <strong>Working group: 3 → 15 people</strong> · <strong>Web production release</strong> · <strong>3 Contact Card variants</strong></p>
+  <h3>Scale and constraints</h3>
+  <ul><li>Around <strong>4–5 different snippet implementations</strong> and approximately <strong>2 sidebar variants</strong> had accumulated across the product.</li><li>The working group grew from <strong>3 to 15 participants</strong> across product, design, and engineering.</li><li>The web system had to work across several responsive contexts.</li><li>Monetization requirements were introduced while the system was already being designed.</li><li>Existing differences reflected a mixture of valid business rules and almost 20 years of legacy.</li></ul>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">AUDIT</div><div class="case-copy">
+  <h2>Finding the system inside the interface</h2>
+  <p>I collected contact-information patterns from across the product in a separate Figma file and grouped their differences by placement, content, behavior, and seller type.</p>
+  <p>The project was deliberately used as a design-system pilot. Its purpose was not only to redesign a small interface element, but also to demonstrate how much hidden complexity could exist inside a seemingly simple piece of contact information.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/01-mobile.webp" width="720" height="1310" /><img src="../assets/cases/contact-system/01.webp" alt="Various types of contact information found across the Cian product" loading="lazy" srcset="../assets/cases/contact-system/01-960.webp 960w, ../assets/cases/contact-system/01-1600.webp 1600w, ../assets/cases/contact-system/01.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2272" decoding="async" /></picture></figure>
+  <h3>Defining the content model</h3>
+  <p>Rather than standardizing the existing layouts directly, I first identified the information shared by their different implementations. Together with product owners, we separated active business requirements from legacy behavior.</p>
+  <p><strong>3 primary placements</strong> · Listing snippet, property-page sidebar, and inline content<br /><strong>6 seller categories</strong> · Owner, realtor, real estate agency, developer, management company, and official representative<br /><strong>6 shared content groups</strong> · Identity, role, verification, loyalty, additional details, and actions</p>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">ARCHITECTURE</div><div class="case-copy">
+  <h2>Three variants, one content model</h2>
+  <p>The content model was assembled from smaller reusable components. This allowed the system to keep the same information and behavior while changing its composition for different contexts.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/02-mobile.webp" width="720" height="3330" /><img src="../assets/cases/contact-system/02.webp" alt="Smaller reusable components that make up the Contact Card" loading="lazy" srcset="../assets/cases/contact-system/02-960.webp 960w, ../assets/cases/contact-system/02-1600.webp 1600w, ../assets/cases/contact-system/02.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2782" decoding="async" /></picture></figure>
+  <p>I initially explored one fully adaptive component. As the number of valid combinations grew, I split it into three placement-based variants built on the same underlying model.</p>
+  <p>Instead of separating larger “cards” from smaller “bars”, I named all variants by their placement:</p>
+  <ul><li><strong>Snippet Contact Card</strong> — compact contact information inside a property-listing snippet.</li><li><strong>Sidebar Contact Card</strong> — a persistent contact area in the property-page sidebar.</li><li><strong>Inline Contact Card</strong> — an expanded contact block inside the main content flow.</li></ul>
+  <p>Individual elements can appear or disappear depending on the context and available data, but every variant uses the same underlying model.</p>
+  <h3>Making seller roles clear</h3>
+  <p>Users could not always tell whether a listing represented an owner, realtor, real estate agency, developer, management company, or official representative.</p>
+  <p>I introduced an overline label to make the seller role immediately visible without competing with the seller name. Avatar shapes and role-specific placeholder icons reinforced the distinction.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/03-mobile.webp" width="720" height="1556" /><img src="../assets/cases/contact-system/03.webp" alt="Avatar classification for personal and organization account types" loading="lazy" srcset="../assets/cases/contact-system/03-960.webp 960w, ../assets/cases/contact-system/03-1600.webp 1600w, ../assets/cases/contact-system/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1396" decoding="async" /></picture></figure>
+  <p>Round avatars represent personal accounts. Square avatars represent organizations. The placeholder icon changes depending on the account type.</p>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">VARIANTS</div><div class="case-copy">
+  <h2>Snippet Contact Card</h2>
+  <p>This compact variant appears inside property-listing snippets. It keeps seller identity and primary actions clear without competing with the property preview, replacing around 4–5 different legacy implementations.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/04-mobile.webp" width="720" height="452" /><img src="../assets/cases/contact-system/04.webp" alt="Snippet Contact Card inside property-listing snippets" loading="lazy" srcset="../assets/cases/contact-system/04-960.webp 960w, ../assets/cases/contact-system/04-1600.webp 1600w, ../assets/cases/contact-system/04.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1186" decoding="async" /></picture></figure>
+  <h3>Sidebar Contact Card</h3>
+  <p>This variant remains visible while the user explores the property page. It supports more seller information and actions than the Snippet variant.</p>
+  <p>I used a contact section from an existing <a href="https://www.cian.ru/agents/52952666/" target="_blank" rel="noopener noreferrer">real estate agent page</a> that I had previously designed as a starting point. The pattern was revised to fit the shared content model and replace approximately two legacy sidebar versions.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/05-mobile.webp" width="720" height="726" /><img src="../assets/cases/contact-system/05.webp" alt="Sidebar Contact Card on a property page" loading="lazy" srcset="../assets/cases/contact-system/05-960.webp 960w, ../assets/cases/contact-system/05-1600.webp 1600w, ../assets/cases/contact-system/05.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2056" decoding="async" /></picture></figure>
+  <h3>Inline Contact Card</h3>
+  <p>This variant appears inside the main content flow, where there is more space for seller information and stronger visual emphasis.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/06-mobile.webp" width="720" height="790" /><img src="../assets/cases/contact-system/06.webp" alt="Inline Contact Card in the main content flow" loading="lazy" srcset="../assets/cases/contact-system/06-960.webp 960w, ../assets/cases/contact-system/06-1600.webp 1600w, ../assets/cases/contact-system/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2148" decoding="async" /></picture></figure>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">BUSINESS</div><div class="case-copy">
+  <h2>Supporting monetization</h2>
+  <p>During the project, the monetization team introduced profile tiers internally referred to as Bronze, Silver, and VIP. The same tier model applied across all three Contact Card variants rather than creating separate component families.</p>
+  <ul><li><strong>Bronze</strong> showed the seller role and name.</li><li><strong>Silver</strong> added trust-building metadata such as experience, founding date, time on Cian, and the number of active listings.</li><li><strong>VIP</strong> retained the same information and added contact actions.</li><li>Only <strong>VIP</strong> received distinct visual treatment through a colored background behind the avatar and a centered composition.</li></ul>
+  <p>The metadata area initially contained two or three fields but was structured to support additional trust-building information later.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/07-mobile.webp" width="720" height="790" /><img src="../assets/cases/contact-system/07.webp" alt="Inline Contact Card configurations for monetization tiers" loading="lazy" srcset="../assets/cases/contact-system/07-960.webp 960w, ../assets/cases/contact-system/07-1600.webp 1600w, ../assets/cases/contact-system/07.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2148" decoding="async" /></picture></figure>
+  <p>Early concepts relied mainly on decorative differences between tiers. I proposed using information depth as the primary value differentiator and reserving strong visual treatment for VIP.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/08-mobile.webp" width="720" height="1432" /><img src="../assets/cases/contact-system/08.webp" alt="Evolution of the Inline Contact Card monetization model" loading="lazy" srcset="../assets/cases/contact-system/08-960.webp 960w, ../assets/cases/contact-system/08-1600.webp 1600w, ../assets/cases/contact-system/08.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2508" decoding="async" /></picture></figure>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">RESPONSIVE</div><div class="case-copy">
+  <h2>Responsive behavior</h2>
+  <p>The information hierarchy and interaction patterns remained consistent across web breakpoints, while the composition adapted to the available space.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/09-mobile.webp" width="720" height="1872" /><img src="../assets/cases/contact-system/09.webp" alt="Contact Card behavior across responsive breakpoints" loading="lazy" srcset="../assets/cases/contact-system/09-960.webp 960w, ../assets/cases/contact-system/09-1600.webp 1600w, ../assets/cases/contact-system/09.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1308" decoding="async" /></picture></figure>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">ROLLOUT</div><div class="case-copy">
+  <h2>Collaboration and rollout</h2>
+  <p>I started the project with a small group that helped research the problem and discuss the initial idea. As the hidden scope became clearer, we invited potential product owners, other feature owners, the monetization team, and developers.</p>
+  <p>This is how the working group grew from 3 to 15 participants. The hardest part was not designing the cards, but finding ownership, aligning changing requirements, and keeping the system coherent as the group expanded.</p>
+  <p>The first implementation was led by the team responsible for the vertical serving realtors and real estate agencies. This team also introduced the monetization requirements.</p>
+  <p>I documented the anatomy, content rules, variant matrix, responsive behavior, platform differences, and usage examples before the web system was released. I then presented the pilot internally as an example of how design-system work could expose and reduce hidden product complexity.</p>
+  <figure class="case-figure"><img src="../assets/cases/contact-system/18.webp" alt="Contact system collaboration and rollout process" loading="lazy" srcset="../assets/cases/contact-system/18-960.webp 960w, ../assets/cases/contact-system/18-1600.webp 1600w, ../assets/cases/contact-system/18.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1372" decoding="async" /></figure>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">IMPACT</div><div class="case-copy">
+  <h2>Before and after</h2>
+  <p>The new Snippet Contact Card replaced several disconnected implementations with one shared structure.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/10-mobile.webp" width="720" height="1384" /><img src="../assets/cases/contact-system/10.webp" alt="Comparison of disconnected legacy snippets with the shared Snippet Contact Card" loading="lazy" srcset="../assets/cases/contact-system/10-960.webp 960w, ../assets/cases/contact-system/10-1600.webp 1600w, ../assets/cases/contact-system/10.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2200" decoding="async" /></picture></figure>
+  <p>The Sidebar Contact Card brought the same model into the property page while preserving the needs of that placement.</p>
+  <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/11-mobile.webp" width="720" height="1572" /><img src="../assets/cases/contact-system/11.webp" alt="Sidebar Contact Card used in the property-page context" loading="lazy" srcset="../assets/cases/contact-system/11-960.webp 960w, ../assets/cases/contact-system/11-1600.webp 1600w, ../assets/cases/contact-system/11.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2149" decoding="async" /></picture></figure>
+  <details class="case-details">
+    <summary><span class="material-symbols-sharp case-details-icon" aria-hidden="true">expand_more</span><span>Additional component variants and design stages</span></summary>
+    <div class="case-details-content">
+      <h3>Snippet configurations</h3><figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/12-mobile.webp" width="720" height="850" /><img src="../assets/cases/contact-system/12.webp" alt="Snippet Contact Card configurations" loading="lazy" srcset="../assets/cases/contact-system/12-960.webp 960w, ../assets/cases/contact-system/12-1600.webp 1600w, ../assets/cases/contact-system/12.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1186" decoding="async" /></picture></figure>
+      <h3>Snippet design evolution</h3><figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/13-mobile.webp" width="720" height="2542" /><img src="../assets/cases/contact-system/13.webp" alt="Stages in the Snippet Contact Card design evolution" loading="lazy" srcset="../assets/cases/contact-system/13-960.webp 960w, ../assets/cases/contact-system/13-1600.webp 1600w, ../assets/cases/contact-system/13.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1126" decoding="async" /></picture></figure>
+      <h3>Existing agent-page pattern used as a starting point</h3><figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/14-mobile.webp" width="720" height="460" /><img src="../assets/cases/contact-system/14.webp" alt="Existing real estate agent contact section used as a starting point" loading="lazy" srcset="../assets/cases/contact-system/14-960.webp 960w, ../assets/cases/contact-system/14-1600.webp 1600w, ../assets/cases/contact-system/14.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1138" decoding="async" /></picture></figure>
+      <h3>Sidebar configurations</h3><figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/15-mobile.webp" width="720" height="1108" /><img src="../assets/cases/contact-system/15.webp" alt="Sidebar Contact Card configurations" loading="lazy" srcset="../assets/cases/contact-system/15-960.webp 960w, ../assets/cases/contact-system/15-1600.webp 1600w, ../assets/cases/contact-system/15.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1922" decoding="async" /></picture></figure>
+      <h3>Sidebar design evolution</h3><figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/16-mobile.webp" width="720" height="2348" /><img src="../assets/cases/contact-system/16.webp" alt="Stages in the Sidebar Contact Card design evolution" loading="lazy" srcset="../assets/cases/contact-system/16-960.webp 960w, ../assets/cases/contact-system/16-1600.webp 1600w, ../assets/cases/contact-system/16.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1200" decoding="async" /></picture></figure>
+      <h3>Compact layout evolution</h3>
+      <p>This compact variant was initially called Contact Bar. It was later treated as another Contact Card placement rather than a separate component type.</p>
+      <figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/contact-system/17-mobile.webp" width="720" height="2834" /><img src="../assets/cases/contact-system/17.webp" alt="Stages in the compact Contact Card design evolution" loading="lazy" srcset="../assets/cases/contact-system/17-960.webp 960w, ../assets/cases/contact-system/17-1600.webp 1600w, ../assets/cases/contact-system/17.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2508" decoding="async" /></picture></figure>
+    </div>
+  </details>
+</div></section>
+
+<section class="section-grid ruled case-section"><div class="side-label">OUTCOME</div><div class="case-copy">
+  <h2>One shared contact system</h2>
+  <ul><li><strong>4–5 snippet implementations and approximately 2 sidebar variants → one shared model</strong></li><li><strong>Scattered scenarios → three controlled, context-specific variants</strong></li><li><strong>Unstructured contact information → six shared content groups</strong></li><li><strong>Separate monetization requirements → one extensible tier architecture</strong></li></ul>
+  <p>The web system was released to production. Its structure remains in use today, although individual details have evolved, including the addition of new badges.</p>
+  <h3>Live examples</h3>
+  <ul><li><a href="https://www.cian.ru/kupit-kvartiru-vtorichka/" target="_blank" rel="noopener noreferrer">Snippet Contact Cards in secondary-market listings</a></li><li><a href="https://www.cian.ru/sale/flat/330482060/" target="_blank" rel="noopener noreferrer">Standard Sidebar Contact Card</a></li><li><a href="https://www.cian.ru/sale/flat/323120501/" target="_blank" rel="noopener noreferrer">VIP Sidebar and Inline Contact Cards</a></li></ul>
+</div></section>
+
+<section class="section-grid ruled case-next"><div class="side-label">NEXT CASE</div><div><p class="eyebrow">Cian · Research · Strategy</p><a class="case-next-link" href="./design-system-analysis.html"><span class="case-next-text">Product Audit Before Building Cian’s Design System</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a></div></section>
+</main>
+<footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+</div>
+</body>
+</html>

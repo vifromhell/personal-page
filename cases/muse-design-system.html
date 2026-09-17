@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Scaling a Design System across six products — Vitaliy Kapustyanov</title>
+  <meta name="description" content="We moved from maintaining separate product systems to building a shared Design System that could support six products with a small team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="case-header-start">
+        <a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a>
+        <a class="brand" href="../index.html">Vitaliy Kapustyanov</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation"><a href="../index.html#work">Work</a></nav>
+    </header>
+    <main>
+      <section class="section-grid case-hero">
+        <div class="side-label">CASE STUDY</div>
+        <div class="case-hero-content">
+          <p class="eyebrow">Muse · Architecture · Governance</p>
+          <h1>Scaling a Design System across six products</h1>
+          <p class="case-lead">We moved from maintaining separate product systems to building a shared Design System that could support six products with a small team.</p>
+          <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design System Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Six products · Web + App</span></span><span class="case-meta-item"><span class="case-meta-label">Outcome</span><span class="case-meta-value">One shared architecture</span></span></div>
+        </div>
+      </section>
+      <section class="section-grid ruled case-section">
+        <div class="side-label">CONTEXT</div>
+        <div class="case-copy">
+          <h2>Overview</h2>
+          <p><strong>How we moved from maintaining separate product systems to building a shared Design System that could support six products with a small team.</strong></p>
+<p><strong>6 products · Web &amp; App · 4 themed products · 4,300+ Figma component and variant entities</strong></p>
+<p><strong>My role:</strong> Co-architect and primary Figma maintainer of the shared Design System.</p>
+<p>The products entered the ecosystem with very different levels of maturity, legacy and platform complexity. The challenge was no longer improving one library at a time — it was making the system scale across the product portfolio.</p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">OVERVIEW</div>
+        <div class="case-copy">
+          <h2>01 — Why the old model didn’t scale</h2>
+          <p>At first the scope was manageable: one product, a small Core and around 20 basic components. As the scope expanded, each product added its own component conventions, semantics, assets and legacy constraints.</p>
+<p>With a small Design System team, maintaining six independent systems was not sustainable.</p>
+<p><strong>The problem was structural: our workload scaled with the number of products.</strong></p>
+<p>We needed to separate what was truly product-specific from what could be designed, maintained and evolved once for the whole ecosystem.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/01-mobile.webp" width="720" height="750" /><img src="../assets/cases/muse-design-system/01.webp" alt="Repeated maintenance across separate product design systems" loading="lazy" srcset="../assets/cases/muse-design-system/01-960.webp 960w, ../assets/cases/muse-design-system/01-1600.webp 1600w, ../assets/cases/muse-design-system/01.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1560" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">CHALLENGE</div>
+        <div class="case-copy">
+          <h2>02 — The strategic shift</h2>
+          <p>The company-wide rebrand created a natural migration window. Products already had to change colors, typography and other visual foundations, so we used that moment to reconsider which decisions should remain local and which could become shared.</p>
+<p>I participated in the visual exploration, but my main contribution was systematisation: identifying inconsistencies, turning recurring decisions into reusable rules and translating the new brand direction into UI foundations.</p>
+<p>Around the same time, the company introduced a strategic direction to treat the Design System as an internal product. The direction itself did not originate from me; our team translated it into an architecture and operating model for the Muse ecosystem.</p>
+<blockquote><p><strong>From maintaining six product systems to building one internal product that products could consume.</strong></p></blockquote>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">STRATEGY</div>
+        <div class="case-copy">
+          <h2>03 — Shared architecture</h2>
+          <p>We standardised the underlying system rather than forcing every product to look identical.</p>
+<p><strong>Shared foundations</strong> — primitives, semantic rules, shared assets and baseline Web/App components.</p>
+<p><strong>Product adaptation</strong> — each product has its own Core, mapping the shared primitives to product-specific semantics and visual parameters.</p>
+<p><strong>Product UI</strong> — product Web/App libraries reuse Foundation components and add domain-specific components where needed.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/02-mobile.webp" width="720" height="1902" /><img src="../assets/cases/muse-design-system/02.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/02-960.webp 960w, ../assets/cases/muse-design-system/02-1600.webp 1600w, ../assets/cases/muse-design-system/02.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2640" decoding="async" /></picture></figure>
+<p><strong>Principle:</strong> share what is stable; keep variation where it belongs.</p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ARCHITECTURE</div>
+        <div class="case-copy">
+          <h2>04 — Shared where it helps, separate where it doesn’t</h2>
+          <p>We initially explored keeping simple Web and App components together. In practice, visual similarity was not enough: the platforms differed in control dimensions, clickable areas, modal patterns, navigation bars, cells and interaction behaviour.</p>
+<p>So Web and App Foundations stayed separate while sharing tokens, semantics, assets and organisational logic.</p>
+<p>The same principle applies at product level. Ultimate Guitar, for example, needs control dimensions and icon-to-touch-area combinations that differ from the shared Button model. We could expose enough properties to support every combination, but that would make the common API harder for everyone to use.</p>
+<p><strong>A Foundation component should not absorb every product variation just because it technically can.</strong></p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/03-mobile.webp" width="720" height="1294" /><img src="../assets/cases/muse-design-system/03.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/03-960.webp 960w, ../assets/cases/muse-design-system/03-1600.webp 1600w, ../assets/cases/muse-design-system/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1822" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DECISION</div>
+        <div class="case-copy">
+          <h2>05 — How it works in practice: Button</h2>
+          <p>A Foundation Button defines the base structure and behaviour. In a product library, it is nested inside a product-level component set and remapped to Product Core values — colors, typography, radius, spacing and other relevant parameters.</p>
+<p>Because every Product Core is built on the same Muse Tokens primitives, products can change their visual identity without creating an independent value system.</p>
+<p><strong>Foundation Button + Product Core → Product Button → Page / Screen</strong></p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/04-mobile.webp" width="720" height="2110" /><img src="../assets/cases/muse-design-system/04.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/04-960.webp 960w, ../assets/cases/muse-design-system/04-1600.webp 1600w, ../assets/cases/muse-design-system/04.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2426" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">EXECUTION</div>
+        <div class="case-copy">
+          <h2>06 — Migration and governance</h2>
+          <p>A shared architecture did not mean rebuilding every product from scratch. We migrated incrementally, usually starting with Product Core and then moving to components. Where rebuilding legacy provided little immediate value, we kept it and updated the visual styling instead.</p>
+<p>Sheet Music Plus is a clear example: its legacy library continued supporting current production while a new system was used for new features. As adoption grows, the old library can disappear progressively.</p>
+<p><strong>The goal was adoption, not architectural purity.</strong></p>
+<p>New components usually originate from real product needs. Designer and developers review them together and decide whether cross-product reuse justifies the shared complexity.</p>
+<p>Patterns such as <strong>Pill Button</strong> and <strong>Gallery</strong> moved into Foundation. UG-specific Button variants stayed product-specific, while single-product charts were not promoted into the shared system.</p>
+<p><strong>Reuse has to justify shared complexity.</strong></p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">GOVERNANCE</div>
+        <div class="case-copy">
+          <h2>07 — Making the system maintainable</h2>
+          <p>I worked with a developer to align Figma and Storybook around the same component taxonomy: <strong>Actions · Inputs · Navigation · Feedback · Overlay · Data Display · Patterns</strong>.</p>
+<p>Figma component pages use the same predictable structure: <strong>Component Meta → Main components → Parts → Usage</strong>.</p>
+<p>We also reduced documentation deliberately: detailed guidance remains for abstract principles, while component behaviour and corner cases are resolved together during implementation. Designers get concise Usage guidance in Figma; developers get the implemented component in Storybook.</p>
+<p><strong>We document decisions and behaviour, not inspectable values.</strong></p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ADOPTION</div>
+        <div class="case-copy">
+          <h2>08 — Proof it scaled</h2>
+          <p>The clearest proof came from later products.</p>
+<p>Early in my Muse work, bringing MuseScore into the system meant analysing production, reconstructing libraries, defining semantics, rebuilding components and organising pages.</p>
+<p>By the time we worked with Hal Leonard, most of that foundation already existed. I could duplicate the most mature product library built on our shared Foundations, connect it to the new Product Core and remap its token bindings.</p>
+<p>Instead of creating another Design System, I was adapting an existing system to another product.</p>
+<blockquote><p><strong>A new product had become primarily an adaptation problem rather than a new Design System project.</strong></p></blockquote>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/05-mobile.webp" width="720" height="1182" /><img src="../assets/cases/muse-design-system/05.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/05-960.webp 960w, ../assets/cases/muse-design-system/05-1600.webp 1600w, ../assets/cases/muse-design-system/05.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1848" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">IMPACT</div>
+        <div class="case-copy">
+          <h2>Outcome</h2>
+          <p><strong>System:</strong> six products share one underlying architecture while retaining product-specific UI and domain patterns.</p>
+<p><strong>Team:</strong> the Design System team moved from reactive product support toward building and evolving a shared internal product.</p>
+<p><strong>My contribution:</strong> co-architected the shared system; authored the semantic color architecture, Image Foundation, monochrome Foundation theme and most Foundation components; co-developed the library structure and documentation model; and became the primary Figma maintainer across the ecosystem.</p>
+<p><strong>Scale:</strong> 4,300+ component and variant entities across the current Web, App and Image Foundation files.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/06-mobile.webp" width="720" height="1484" /><img src="../assets/cases/muse-design-system/06.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/06-960.webp 960w, ../assets/cases/muse-design-system/06-1600.webp 1600w, ../assets/cases/muse-design-system/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1432" decoding="async" /></picture></figure>
+<blockquote><p>Figma counts variants as individual components. This number describes the scale of the maintained libraries, not 4,300 unique UI component families.</p></blockquote>
+        </div>
+      </section>
+      <section class="section-grid ruled case-next">
+        <div class="side-label">NEXT CASE</div>
+        <div><p class="eyebrow">Muse · Icon system · Governance</p><a class="case-next-link" href="./muse-icon-system.html"><span class="case-next-text">Unified Icon System across Muse products</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a></div>
+      </section>
+    </main>
+    <footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+  </div>
+</body>
+</html>

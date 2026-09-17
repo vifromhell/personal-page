@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Semantic Color Architecture across Muse products — Vitaliy Kapustyanov</title>
+  <meta name="description" content="I redesigned Muse color semantics so one structure could support six product systems across Web and App, including four products with theming." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="case-header-start">
+        <a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a>
+        <a class="brand" href="../index.html">Vitaliy Kapustyanov</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation"><a href="../index.html#work">Work</a></nav>
+    </header>
+    <main>
+      <section class="section-grid case-hero">
+        <div class="side-label">CASE STUDY</div>
+        <div class="case-hero-content">
+          <p class="eyebrow">Muse · Color system · Design tokens</p>
+          <h1>Semantic Color Architecture across Muse products</h1>
+          <p class="case-lead">I redesigned Muse color semantics so one structure could support six product systems across Web and App, including four products with theming.</p>
+          <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design System Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Six products · Web + App</span></span><span class="case-meta-item"><span class="case-meta-label">Outcome</span><span class="case-meta-value">One semantic structure</span></span></div>
+        </div>
+      </section>
+      <section class="section-grid ruled case-section">
+        <div class="side-label">CONTEXT</div>
+        <div class="case-copy">
+          <h2>Overview</h2>
+          <p><strong>How I redesigned Muse color semantics so one structure could support six product systems, Web and App, including four products with theming — without encoding every component and state into the token system.</strong></p>
+<p><strong>6 products · Web &amp; App · 4 themed products · 1 semantic structure</strong></p>
+<p><strong>My role:</strong> author of the shared cross-product semantic structure and naming logic; co-author of the shared opacity-state model; maintainer of product Core adoption.</p>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">OVERVIEW</div>
+        <div class="case-copy">
+          <h2>01 — The old model described accumulated cases</h2>
+          <p>When I joined the product, color tokens had grown around individual use cases. Names mixed roles, components, themes, states and hierarchy: <code>Main</code>, <code>Text</code>, <code>Icon</code>, <code>Dark/Text</code>, <code>Dark/Button</code>, <code>Hover</code>, <code>Disable</code>, <code>1</code>, <code>2</code>, <code>3</code>.</p>
+<p>The problem was not only naming. The structure made it hard to predict where a new token should go, and every new product could create another branch of exceptions.</p>
+<blockquote><p><strong>The system described existing cases rather than a reusable model of the interface.</strong></p></blockquote>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/01-mobile.webp" width="720" height="1438" /><img src="../assets/cases/muse-color-system/01.webp" alt="Legacy color palette across Muse products" loading="lazy" srcset="../assets/cases/muse-color-system/01-960.webp 960w, ../assets/cases/muse-color-system/01-1600.webp 1600w, ../assets/cases/muse-color-system/01.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1770" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">CHALLENGE</div>
+        <div class="case-copy">
+          <h2>02 — My first structure fixed the chaos, but not the abstraction level</h2>
+          <p>My first semantic model introduced predictable groups such as <code>Text</code>, <code>Icon</code>, <code>Action</code>, <code>Surface</code>, <code>Edge</code>, <code>Alert</code>, <code>Overlay</code> and <code>Additional</code>.</p>
+<p>This was a major improvement, but it still encoded too much context. <code>Text</code> and <code>Icon</code> duplicated similar roles, while <code>Action / Primary / Hovered</code> and similar tokens tied color semantics directly to component states.</p>
+<p>As the Design System expanded across products, this explicit model started to scale poorly.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/02-mobile.webp" width="720" height="1908" /><img src="../assets/cases/muse-color-system/02.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-color-system/02-960.webp 960w, ../assets/cases/muse-color-system/02-1600.webp 1600w, ../assets/cases/muse-color-system/02.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2204" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">STRATEGY</div>
+        <div class="case-copy">
+          <h2>03 — Designing semantics around decisions, not components</h2>
+          <p>I reframed the question from <strong>“Which token is meant for this exact use case?”</strong> to <strong>“What kind of visual role am I choosing?”</strong></p>
+<p>The shared model became:</p>
+<p><strong>Content · Accent · Background · Stroke · Status · Overlay · Exception</strong></p>
+<p>A component now interprets the semantic role instead of being encoded into it. <code>Content / Secondary</code> can be used for text, an icon or another foreground element. <code>Background / Raised</code> does not need to know whether the surface is a card, panel or future component.</p>
+<p>The naming inside each group follows the decision designers actually make:</p>
+<ul><li><strong>Content:</strong> hierarchy — <code>Primary → Secondary → Tertiary → Quaternary</code></li><li><strong>Background:</strong> surface levels — <code>Base → Subtle → Surface → Raised → Elevated → Highest</code></li><li><strong>Stroke:</strong> intensity — <code>Subtle → Moderate → Strong → Emphasis → Intense</code></li></ul>
+<p>Accent, Status, Overlay and Exception follow the same principle but use naming appropriate to their own role. Overlay, for example, covers semi-transparent compositional layers such as modal backdrops and image veils.</p>
+<p>I also treated naming as part of usability: token names had to remain short, easy to scan, visually distinguishable in lists and practical in full token paths for both designers and developers.</p>
+<blockquote><p><strong>A consistent taxonomy does not require the same naming pattern everywhere. Each group should reflect the relationship between its values.</strong></p></blockquote>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/03-mobile.webp" width="720" height="2988" /><img src="../assets/cases/muse-color-system/03.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-color-system/03-960.webp 960w, ../assets/cases/muse-color-system/03-1600.webp 1600w, ../assets/cases/muse-color-system/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1816" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ARCHITECTURE</div>
+        <div class="case-copy">
+          <h2>04 — Separating interaction state from color</h2>
+          <p>The idea of using opacity for interaction states already existed in Ultimate Guitar. Our architect suggested taking it into the shared system.</p>
+<p>I challenged the approach with engineering, then refined the irregular product values into a consistent shared scale and added the missing Loading state:</p>
+<p><strong>Default 100% · Hovered 80% · Loading 70% · Pressed 60% · Disabled 40%</strong></p>
+<p>This removed the need to create separate color tokens for every role/state combination.</p>
+<p><strong>Before:</strong> semantic color × component role × state</p>
+<p><strong>After:</strong> semantic color + shared state opacity</p>
+<p>My contribution was evaluation, refinement, standardisation and cross-product adoption rather than the original invention of the idea.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/04-mobile.webp" width="720" height="2034" /><img src="../assets/cases/muse-color-system/04.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-color-system/04-960.webp 960w, ../assets/cases/muse-color-system/04-1600.webp 1600w, ../assets/cases/muse-color-system/04.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1960" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DECISION</div>
+        <div class="case-copy">
+          <h2>05 — One semantic skeleton across products and themes</h2>
+          <p>The same semantic names are used across Product Cores. What changes are the aliases to each product's primitive palette.</p>
+<p>A component can always use <code>Content / Primary</code>. In a light theme it may resolve to a dark primitive; in a dark theme it resolves to a light primitive. The component and semantic token remain unchanged.</p>
+<p>Products without theming use the same structure with a single mode, so themed and non-themed products do not require separate semantic architectures.</p>
+<p>Product-specific semantics stay in <code>Additional</code>, extending the Product Core without changing the shared model.</p>
+<blockquote><p><strong>Same naming → same semantic model → different aliases.</strong></p></blockquote>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/05-mobile.webp" width="720" height="1874" /><img src="../assets/cases/muse-color-system/05.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-color-system/05-960.webp 960w, ../assets/cases/muse-color-system/05-1600.webp 1600w, ../assets/cases/muse-color-system/05.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2238" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">EXECUTION</div>
+        <div class="case-copy">
+          <h2>06 — What changed for designers</h2>
+          <p>The practical goal was to make color selection easier without removing useful constraints.</p>
+<p><strong>Before:</strong> find the token created for the exact use case.</p>
+<p><strong>After:</strong> choose the visual role, then choose the hierarchy or intensity.</p>
+<p><strong>Foreground → Content</strong></p>
+<p><strong>Surface → Background</strong></p>
+<p><strong>Boundary → Stroke</strong></p>
+<p><strong>Brand emphasis → Accent</strong></p>
+<p><strong>System feedback → Status</strong></p>
+<p>The main rule is simple: do not use Background tokens for content or Stroke tokens as backgrounds. Within the correct semantic group, designers can choose the value that best fits the composition without borrowing colors from unrelated roles.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/muse-color-system/06-mobile.webp" width="720" height="2458" /><img src="../assets/cases/muse-color-system/06.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-color-system/06-960.webp 960w, ../assets/cases/muse-color-system/06-1600.webp 1600w, ../assets/cases/muse-color-system/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2140" decoding="async" /></picture></figure>
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">GOVERNANCE</div>
+        <div class="case-copy">
+          <h2>Outcome</h2>
+          <p><strong>One semantic structure</strong> now covers six product systems across Web and App, including four products with theming.</p>
+<p><strong>Light/Dark</strong> differences are handled through aliases. <strong>Interaction states</strong> use one shared opacity scale instead of duplicated color tokens. <strong>Product-specific semantics</strong> remain local in <code>Additional</code>.</p>
+<p>For designers, the mental model changed from memorising exact use-case tokens to choosing <strong>role → hierarchy / intensity</strong>.</p>
+        </div>
+      </section>
+      <section class="section-grid ruled case-next">
+        <div class="side-label">NEXT CASE</div>
+        <div><p class="eyebrow">Cian · Design systems · Iconography</p><a class="case-next-link" href="./icon-system.html"><span class="case-next-text">Building a Unified Icon System for Cian</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a></div>
+      </section>
+    </main>
+    <footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+  </div>
+</body>
+</html>

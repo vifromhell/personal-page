@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+  <title>Building a Unified Icon System for Cian — Vitaliy Kapustyanov</title>
+  <meta name="description" content="I consolidated three fragmented platform libraries into one shared, documented production system—resolving 545 legacy assets into 342 purposeful icons, pictograms, and illustrations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_back,arrow_forward,arrow_upward&amp;display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="case-header-start">
+        <a class="back-link" href="../index.html#work" aria-label="Back to portfolio"><span class="material-symbols-sharp back-arrow" aria-hidden="true">arrow_back</span><span class="back-text">Back</span></a>
+        <a class="brand" href="../index.html">Vitaliy Kapustyanov</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation">
+        <a href="../index.html#work">Work</a>
+      </nav>
+    </header>
+    <main>
+      <section class="section-grid case-hero">
+        <div class="side-label">CASE STUDY</div>
+        <div class="case-hero-content">
+          <p class="eyebrow">Cian · Design systems · Iconography</p>
+          <h1>Building a Unified Icon System for Cian</h1>
+          <p class="case-lead">I consolidated three fragmented platform libraries into one shared, documented production system—resolving 545 legacy assets into 342 purposeful icons, pictograms, and illustrations.</p>
+          <div class="case-meta"><span class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Design System Designer</span></span><span class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Web, iOS, Android</span></span><span class="case-meta-item"><span class="case-meta-label">Outcome</span><span class="case-meta-value">One shared library</span></span></div>
+        </div>
+      </section>
+      <section class="section-grid ruled case-section">
+        <div class="side-label">CONTEXT</div>
+        <div class="case-copy">
+          <h2>Summary</h2>
+          <p>Cian’s Web, iOS, and Android products relied on three separate libraries containing <strong>545 assets</strong>, with overlapping metaphors, inconsistent naming and sizing, different construction approaches, and no shared visual language.</p>
+<p>I consolidated the fragmented system into <strong>one shared Figma library</strong> of <strong>342 rebuilt and documented assets</strong>. I defined its taxonomy, visual language, library architecture, and governance, and personally redesigned or deeply refactored approximately <strong>80–90%</strong> of the final library.</p>
+<p><strong>My role:</strong> Sole Design System Designer leading the strategy, visual direction, library architecture, governance, and final review in collaboration with product designers and platform teams.</p>
+<p><strong>545 → 342 assets</strong> · <strong>3 platform libraries → 1 shared source</strong> · <strong>Cross-platform features: 3 icons → usually 1</strong> · <strong>80–90% personally redesigned</strong></p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/icon-system/01-mobile.webp" width="720" height="1170" /><img src="../assets/cases/icon-system/01.webp" alt="Three platform libraries consolidated into one shared source" loading="lazy" srcset="../assets/cases/icon-system/01-960.webp 960w, ../assets/cases/icon-system/01-1600.webp 1600w, ../assets/cases/icon-system/01.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2108" decoding="async" /></picture></figure>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DISCOVERY</div>
+        <div class="case-copy">
+          <h2>1. Auditing 545 fragmented assets</h2>
+          <p>The legacy libraries had evolved independently:</p>
+<ul><li><strong>289 Web assets</strong></li><li><strong>136 iOS assets</strong></li><li><strong>120 Android assets</strong></li></ul>
+<p>We brought all assets into one audit space. I compared them by form, naming, and product role, and traced unclear meanings through product designers and leads.</p>
+<p>This separated true duplicates from visually similar assets with different roles. I simplified outdated or ambiguous metaphors and standardized shared metaphors across platforms, retaining exceptions only when platform conventions mattered, such as sharing on iOS and Android.</p>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">DECISION</div>
+        <div class="case-copy">
+          <h2>2. Defining the new icon system</h2>
+          <p>The existing libraries mixed interface icons, pictograms, and illustrations without a clear distinction. I introduced a shared taxonomy:</p>
+<ul><li><strong>Icons:</strong> 12×12, 16×16, and 24×24 px</li><li><strong>Pictograms:</strong> 40×40 px</li><li><strong>Illustrations:</strong> assets larger than 40×40 px</li></ul>
+<p>Dense, information-rich interfaces had already made 16 px the primary size. I formalized that convention as the foundation of the new system.</p>
+<h3>Decision: preserve size-specific roles instead of forcing scalability</h3>
+<p>Each size served a distinct product role, so I designed the required versions as purpose-built assets rather than mechanically scaling one master icon:</p>
+<ul><li><strong>12 px</strong> — separately simplified for exceptional compact scenarios where reducing a 16 px asset would damage legibility and negative space;</li><li><strong>16 px</strong> — the primary interface size, largely filled and optimized for dense, information-rich layouts;</li><li><strong>24 px</strong> — mostly outlined and used in mobile interfaces or more prominent Web product scenarios rather than standard compact components.</li></ul>
+<p>This increased manual work, but preserved clarity at 100% scale and respected the interaction patterns already embedded across the products.</p>
+<p>Redefining these roles would have required changes to component and product architecture on all three platforms. For the first iteration, I formalized and improved the existing model rather than replacing it prematurely.</p>
+<blockquote><p><strong>The system unified visual language and construction rules without erasing meaningful size-specific roles.</strong></p></blockquote>
+<figure class="case-figure"><img src="../assets/cases/icon-system/02.webp" alt="2. Defining the new icon system" loading="lazy" srcset="../assets/cases/icon-system/02-960.webp 960w, ../assets/cases/icon-system/02-1600.webp 1600w, ../assets/cases/icon-system/02.webp 1708w" sizes="(max-width: 767px) 100vw, 75vw" width="1708" height="738" decoding="async" /></figure>
+<p class="caption"><em>24 px outline icons used for prominent property attributes rather than dense controls.</em></p>
+<h3>Shared visual language</h3>
+<p>From the legacy sets and Cian’s logo and interface typeface, I derived a style that balanced softness and precision:</p>
+<ul><li>rounded corners made the icons more approachable;</li><li>square line caps prevented the style from becoming overly soft or playful;</li><li>mostly 2 px strokes created a clear, dense silhouette;</li><li>pixel-grid alignment kept small assets sharp;</li><li>optical balancing compensated for different silhouette shapes;</li><li>shared rules controlled intersections, negative space, and crossed-out states.</li></ul>
+<p>I reviewed the approach with product designers and leads, incorporated relevant feedback, and retained final visual responsibility.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/icon-system/03-mobile.webp" width="720" height="1426" /><img src="../assets/cases/icon-system/03.webp" alt="2. Defining the new icon system" loading="lazy" srcset="../assets/cases/icon-system/03-960.webp 960w, ../assets/cases/icon-system/03-1600.webp 1600w, ../assets/cases/icon-system/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1166" decoding="async" /></picture></figure>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/icon-system/04-mobile.webp" width="720" height="1388" /><img src="../assets/cases/icon-system/04.webp" alt="2. Defining the new icon system" loading="lazy" srcset="../assets/cases/icon-system/04-960.webp 960w, ../assets/cases/icon-system/04-1600.webp 1600w, ../assets/cases/icon-system/04.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1508" decoding="async" /></picture></figure>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">EXECUTION</div>
+        <div class="case-copy">
+          <h2>3. Rebuilding and documenting the library</h2>
+          <p>Visual consistency alone would not solve maintenance and discoverability. I standardized both the structure of every asset and its attached guidance.</p>
+<h3>A predictable component structure</h3>
+<p>Each of the 342 final assets followed the same model:</p>
+<ul><li><strong>Shape</strong> — a merged, production-ready form used for export and recoloring;</li><li><strong>Source</strong> — a hidden group containing the editable construction shapes.</li></ul>
+<p>This made every asset predictable to inspect, recolor, export, edit, and reuse.</p>
+<h3>Naming and taxonomy</h3>
+<p>Icons used <strong>Category / Size / Name</strong>—for example, <strong>Action / 16×16 / ArrowDown</strong>. Pictograms used <strong>Pictograms / Category / Name</strong>.</p>
+<p>Names described the visible symbol rather than a single product scenario, keeping metaphors reusable across contexts.</p>
+<h3>Usage guidance and bilingual search</h3>
+<p>Every final asset received:</p>
+<ul><li>an explanation of its intended product context;</li><li>clarification where similar assets could be confused;</li><li>Russian search tags;</li><li>English search tags.</li></ul>
+<p>When usage could not be inferred from the symbol, I consulted product designers and leads, then standardized the resulting terminology and documentation across the library.</p>
+<figure class="case-figure"><picture><source media="(max-width: 767px)" srcset="../assets/cases/icon-system/05-mobile.webp" width="720" height="1608" /><img src="../assets/cases/icon-system/05.webp" alt="3. Rebuilding and documenting the library" loading="lazy" srcset="../assets/cases/icon-system/05-960.webp 960w, ../assets/cases/icon-system/05-1600.webp 1600w, ../assets/cases/icon-system/05.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1532" decoding="async" /></picture></figure>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">ADOPTION</div>
+        <div class="case-copy">
+          <h2>4. Migrating one system across three platforms</h2>
+          <h3>Decision: one shared source instead of three platform libraries</h3>
+<p>Product designers previously had to identify which platform library contained the right metaphor, while the same cross-platform feature could require three separately maintained Web, iOS, and Android assets.</p>
+<p>I replaced this model with one shared Figma library accessible to every product team. The full metaphor set could now be searched, reviewed, documented, updated, and extended in one place.</p>
+<p>For most cross-platform features, the default changed from <strong>three platform-specific icons to one shared asset</strong>. I retained a second variant only when a familiar platform convention materially improved recognition, such as platform-specific sharing patterns.</p>
+<blockquote><p><strong>One shared source became the default; platform variants became justified exceptions.</strong></p></blockquote>
+<h3>Confirmed outcomes</h3>
+<ul><li>Three platform libraries were replaced with one shared Figma source.</li><li>All product designers moved to the shared system.</li><li>All 342 final assets were reviewed, rebuilt, structured, described, and tagged.</li><li>iOS completed the icon replacement before I left the company.</li><li>The redesigned system was subsequently implemented in the live Web product.</li></ul>
+<h3>Implemented in production</h3>
+<p>The system was not limited to the design library. The shared icon language appeared across live product surfaces, including residential-complex pages, listing-detail pages, and commercial scenarios. These examples show the same system operating across different product contexts and information densities.</p>
+<figure class="case-figure"><img src="../assets/cases/icon-system/06.webp" alt="4. Migrating one system across three platforms" loading="lazy" srcset="../assets/cases/icon-system/06-960.webp 960w, ../assets/cases/icon-system/06-1600.webp 1600w, ../assets/cases/icon-system/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1874" decoding="async" /></figure>
+<p class="caption"><em>Residential-complex page — the same system used across a broader product surface.</em></p>
+<figure class="case-figure"><img src="../assets/cases/icon-system/07.webp" alt="4. Migrating one system across three platforms" loading="lazy" srcset="../assets/cases/icon-system/07-960.webp 960w, ../assets/cases/icon-system/07-1600.webp 1600w, ../assets/cases/icon-system/07.webp 1700w" sizes="(max-width: 767px) 100vw, 75vw" width="1700" height="1134" decoding="async" /></figure>
+<p class="caption"><em>Commercial scenario — shared metaphors reused beyond residential flows.</em></p>
+<figure class="case-figure"><img src="../assets/cases/icon-system/08.webp" alt="4. Migrating one system across three platforms" loading="lazy" srcset="../assets/cases/icon-system/08-960.webp 960w, ../assets/cases/icon-system/08-1600.webp 1600w, ../assets/cases/icon-system/08.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1865" decoding="async" /></figure>
+<p class="caption"><em>Listing-detail page — shared icons used across dense metadata, actions, and supporting modules.</em></p>
+<p>I left shortly after launch, so I do not claim post-launch efficiency metrics. The confirmed impact is a completed migration to one shared visual language, library architecture, and production model.</p>
+<h3>Trade-offs</h3>
+<p>We produced only the sizes required by real scenarios and retained rare platform-specific variants where familiarity outweighed uniformity.</p>
+<blockquote><p><strong>The result was not only a unified visual style, but a maintainable production system for creating, finding, and governing visual assets.</strong></p></blockquote>
+
+        </div>
+      </section>
+<section class="section-grid ruled case-section">
+        <div class="side-label">LESSONS</div>
+        <div class="case-copy">
+          <h2>Reflection</h2>
+          <p>The hardest part was resolving ownership, meaning, and exceptions across products—not drawing individual icons. The project changed how I approach visual-system work: consistency only becomes sustainable when taxonomy, construction rules, documentation, governance, and migration are designed together. In a future iteration, I would define adoption checkpoints and usage analytics earlier so that search efficiency and migration progress could be measured after launch.</p>
+
+        </div>
+      </section>
+      <section class="section-grid ruled case-next">
+        <div class="side-label">NEXT CASE</div>
+        <div>
+          <p class="eyebrow">Cian · Foundations · Design tokens</p>
+          <a class="case-next-link" href="./semantic-color-system.html"><span class="case-next-text">Building a Cross-Platform Semantic Color System</span><span class="material-symbols-sharp case-next-arrow" aria-hidden="true">arrow_forward</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Vitaliy Kapustyanov</span><a class="footer-back-link" href="../index.html#work"><span class="footer-back-text">Back to selected work</span><span class="material-symbols-sharp footer-up-arrow" aria-hidden="true">arrow_upward</span></a></footer>
+  </div>
+</body>
+</html>

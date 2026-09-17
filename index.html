@@ -4,11 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
+  <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png" />
   <title>Vitaliy Kapustyanov — Design System Designer</title>
   <meta name="description" content="Portfolio prototype for Vitaliy Kapustyanov, Design System Designer." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@32,300,0,100&amp;icon_names=arrow_forward,arrow_outward,expand_more&amp;display=block" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -20,6 +24,7 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a href="./assets/documents/Vitaliy_Kapustyanov_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </header>
 
@@ -31,7 +36,7 @@
           <h1>I bring structure to complex digital products.</h1>
           <p class="lead">I turn fragmented interfaces, libraries, and workflows into coherent design systems that teams can understand, maintain, and scale.</p>
           <div class="meta-row">
-            <span>20 years in design</span>
+            <span>20+ years in design</span>
             <span>5+ years in design systems</span>
             <span>Helsinki, Finland</span>
           </div>
@@ -43,49 +48,120 @@
         <div class="section-content">
           <div class="section-heading">
             <h2>Design systems work</h2>
-            <p>Case studies will later be sourced from Notion.</p>
+            <p>Case studies showing how I audit fragmented products, define system foundations,<br class="desktop-break" /> and turn recurring interface problems into scalable cross-platform solutions.</p>
           </div>
 
           <div class="project-list">
-            <a class="project-card" href="#" aria-label="Placeholder case study">
-              <div class="project-media media-placeholder">
-                <span>CASE IMAGE / DIAGRAM</span>
+            <a class="project-card" href="./cases/muse-accessibility.html" aria-label="Read Building Accessibility into Muse Design Systems">
+              <div class="project-media"><img src="./assets/cases/muse-accessibility/cover.webp" alt="Accessibility symbols and WCAG lettering on a black background" srcset="./assets/cases/muse-accessibility/cover-960.webp 960w, ./assets/cases/muse-accessibility/cover-1600.webp 1600w, ./assets/cases/muse-accessibility/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Building Accessibility into Muse Design Systems</h3></div><p class="project-summary">Turned accessibility research into a repeatable framework for audits, ownership, system foundations, and testing.</p><p class="project-scale">ACCESSIBILITY · AUDIT · WCAG · GOVERNANCE · VOICEOVER</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/muse-design-system.html" aria-label="Read Scaling a Design System across six products">
+              <div class="project-media"><img src="./assets/cases/muse-design-system/cover.webp" alt="Design System lettering over a colorful gradient grid" srcset="./assets/cases/muse-design-system/cover-960.webp 960w, ./assets/cases/muse-design-system/cover-1600.webp 1600w, ./assets/cases/muse-design-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Scaling a Design System across six products</h3></div><p class="project-summary">Moved six products from separately maintained libraries to one shared architecture with product-level adaptation.</p><p class="project-scale">DESIGN SYSTEM · WEB · APP · ARCHITECTURE · GOVERNANCE</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/muse-icon-system.html" aria-label="Read Unified Icon System across Muse products">
+              <div class="project-media"><img src="./assets/cases/muse-icon-system/cover.webp" alt="Bright pink Muse icon set on a dark green background" srcset="./assets/cases/muse-icon-system/cover-960.webp 960w, ./assets/cases/muse-icon-system/cover-1600.webp 1600w, ./assets/cases/muse-icon-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1607" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Unified Icon System across Muse products</h3></div><p class="project-summary">Consolidated 1,136 assets from five libraries into one shared icon system used by seven products.</p><p class="project-scale">ICON SYSTEM · WEB · APP · OPTIMIZATION · GOVERNANCE</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/muse-color-system.html" aria-label="Read Semantic Color Architecture across Muse products">
+              <div class="project-media"><img class="cover-align-left" src="./assets/cases/muse-color-system/cover.webp" alt="Semantic Color Architecture cover with colorful geometric shapes" srcset="./assets/cases/muse-color-system/cover-960.webp 960w, ./assets/cases/muse-color-system/cover-1600.webp 1600w, ./assets/cases/muse-color-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Semantic Color Architecture across Muse products</h3></div><p class="project-summary">Designed one semantic color structure for six product systems across Web and App.</p><p class="project-scale">COLOR SYSTEM · WEB · APP · SEMANTICS · THEMING</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/icon-system.html" aria-label="Read Building a Unified Icon System for Cian">
+              <div class="project-media">
+                <img src="./assets/cases/icon-system/cover.webp" alt="Cian icon construction examples on a light background" srcset="./assets/cases/icon-system/cover-960.webp 960w, ./assets/cases/icon-system/cover-1600.webp 1600w, ./assets/cases/icon-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" />
               </div>
               <div class="project-info">
                 <div>
-                  <p class="project-kicker">Muse Group · Design Systems</p>
-                  <h3>Building a unified icon system</h3>
+                  <h3>Building a Unified Icon System for Cian</h3>
                 </div>
-                <p class="project-summary">From fragmented product-specific libraries to a shared cross-platform system.</p>
-                <span class="arrow">↗</span>
+                <p class="project-summary">Consolidated three platform libraries into one shared system of rebuilt and documented assets.</p>
+                <p class="project-scale">ICON SYSTEM · WEB · IOS · ANDROID · OPTIMIZATION</p>
               </div>
             </a>
 
-            <a class="project-card" href="#" aria-label="Placeholder case study">
-              <div class="project-media media-placeholder">
-                <span>CASE IMAGE / DIAGRAM</span>
+            <a class="project-card" href="./cases/semantic-color-system.html" aria-label="Read Building a Cross-Platform Semantic Color System">
+              <div class="project-media">
+                <img src="./assets/cases/semantic-color-system/cover.webp" alt="Building a Cross-Platform Semantic Color System" srcset="./assets/cases/semantic-color-system/cover-960.webp 960w, ./assets/cases/semantic-color-system/cover-1600.webp 1600w, ./assets/cases/semantic-color-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" />
               </div>
               <div class="project-info">
                 <div>
-                  <p class="project-kicker">Cian · Foundations</p>
-                  <h3>Cross-platform semantic color system</h3>
+                  <h3>Building a Cross-Platform Semantic Color System</h3>
                 </div>
-                <p class="project-summary">A semantic foundation for themes, product consistency, and scalable implementation.</p>
-                <span class="arrow">↗</span>
+                <p class="project-summary">Unified three platform-specific color libraries into one semantic system with reusable tokens.</p>
+                <p class="project-scale">FOUNDATIONS · WEB · IOS · ANDROID · THEMING</p>
               </div>
             </a>
 
-            <a class="project-card" href="#" aria-label="Placeholder case study">
-              <div class="project-media media-placeholder">
-                <span>CASE IMAGE / DIAGRAM</span>
+            <a class="project-card" href="./cases/contact-system.html" aria-label="Read Building a Shared Contact System for Cian">
+              <div class="project-media"><img src="./assets/cases/contact-system/cover.webp" alt="Building a Shared Contact System for Cian" srcset="./assets/cases/contact-system/cover-960.webp 960w, ./assets/cases/contact-system/cover-1600.webp 1600w, ./assets/cases/contact-system/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Building a Shared Contact System for Cian</h3></div><p class="project-summary">Led a cross-team initiative that turned fragmented contact patterns into a shared component model.</p><p class="project-scale">COMPONENTS · WEB · RESPONSIVE · GOVERNANCE · CONTACT FLOWS</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/design-system-analysis.html" aria-label="Read Product Audit Before Building Cian’s Design System">
+              <div class="project-media"><img src="./assets/cases/design-system-analysis/cover.webp" alt="Product Audit Before Building Cian’s Design System" srcset="./assets/cases/design-system-analysis/cover-960.webp 960w, ./assets/cases/design-system-analysis/cover-1600.webp 1600w, ./assets/cases/design-system-analysis/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" /></div>
+              <div class="project-info"><div><h3>Product Audit Before Building Cian’s Design System</h3></div><p class="project-summary">Around 30 interviews turned fragmented internal feedback into priorities and a nine-step roadmap.</p><p class="project-scale">RESEARCH · STRATEGY · INTERVIEW · ROADMAP</p></div>
+            </a>
+
+            <a class="project-card" href="./cases/scalable-design-ecosystem.html" aria-label="Read Building a Scalable Design Ecosystem for a Mobile Trading Product">
+              <div class="project-media">
+                <img src="./assets/cases/scalable-design-ecosystem/cover.webp" alt="Trading product interface fragments on a black background" srcset="./assets/cases/scalable-design-ecosystem/cover-960.webp 960w, ./assets/cases/scalable-design-ecosystem/cover-1600.webp 1600w, ./assets/cases/scalable-design-ecosystem/cover.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="2400" height="1595" decoding="async" loading="lazy" />
               </div>
               <div class="project-info">
                 <div>
-                  <p class="project-kicker">Karuna · Product + System</p>
-                  <h3>Building a scalable design ecosystem</h3>
+                  <h3>Building a Scalable Design Ecosystem for a Mobile Trading Product</h3>
                 </div>
-                <p class="project-summary">Reconstructing a fragmented design environment into a reliable product foundation.</p>
-                <span class="arrow">↗</span>
+                <p class="project-summary">Rebuilt the design infrastructure for a multilingual mobile trading product.</p>
+                <p class="project-scale">PRODUCT DESIGN · DESIGN SYSTEM · IOS · ANDROID · LOCALIZATION</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="product-work" class="section-grid ruled">
+        <div class="side-label">PRODUCT DESIGN</div>
+        <div class="section-content">
+          <div class="section-heading">
+            <h2>Product Design Background</h2>
+            <p>Before specializing in design systems, I designed mobile, tablet,<br class="desktop-break" /> and enterprise products across B2C and B2B environments.</p>
+          </div>
+
+          <div class="product-grid">
+            <a class="product-card" href="./cases/veterinary-ophthalmology-app.html">
+              <div class="product-media"><img src="./assets/product-work/tablet.webp" alt="Tablet app for veterinary ophthalmologists" srcset="./assets/product-work/tablet-960.webp 960w, ./assets/product-work/tablet-1600.webp 1600w, ./assets/product-work/tablet.webp 1629w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="1629" height="1005" decoding="async" loading="lazy" /></div>
+              <div class="product-card-info">
+                <h3>Tablet app for veterinary ophthalmologists</h3>
+                <p class="project-scale">B2B · IPADOS · UX · UI · DESIGN SYSTEM</p>
+              </div>
+            </a>
+
+            <a class="product-card" href="./cases/thrive-vet-care.html">
+              <div class="product-media"><img src="./assets/product-work/thrive.webp" alt="THRIVE Vet Care Mobile App" srcset="./assets/product-work/thrive-960.webp 960w, ./assets/product-work/thrive-1600.webp 1600w, ./assets/product-work/thrive.webp 1920w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="1920" height="1080" decoding="async" loading="lazy" /></div>
+              <div class="product-card-info">
+                <h3>THRIVE Vet Care Mobile App</h3>
+                <p class="project-scale">B2C · IOS · UX · PROTOTYPING · DESIGN SYSTEM</p>
+              </div>
+            </a>
+
+            <a class="product-card" href="./cases/crm-underwriting.html">
+              <div class="product-media"><img src="./assets/product-work/crm.webp" alt="CRM System" srcset="./assets/product-work/crm-960.webp 960w, ./assets/product-work/crm-1600.webp 1600w, ./assets/product-work/crm.webp 1920w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="1920" height="1141" decoding="async" loading="lazy" /></div>
+              <div class="product-card-info">
+                <h3>CRM System</h3>
+                <p class="project-scale">B2B · WEB · RESEARCH · PROTOTYPING · WORKFLOW</p>
+              </div>
+            </a>
+
+            <a class="product-card" href="./cases/fintech-android-app.html">
+              <div class="product-media"><img src="./assets/product-work/fintech.webp" alt="Fintech Android Application" srcset="./assets/product-work/fintech-960.webp 960w, ./assets/product-work/fintech.webp 1440w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" width="1440" height="840" decoding="async" loading="lazy" /></div>
+              <div class="product-card-info">
+                <h3>Fintech Android Application</h3>
+                <p class="project-scale">B2C · ANDROID · UX · UI · REDESIGN</p>
               </div>
             </a>
           </div>
@@ -97,22 +173,19 @@
         <div class="section-content">
           <div class="capabilities">
             <article class="capability">
-              <span class="number">01</span>
               <h3>System architecture</h3>
               <p>Audits, library architecture, foundations, tokens, theming, component models, cross-platform systems.</p>
             </article>
             <article class="capability">
-              <span class="number">02</span>
               <h3>Governance and adoption</h3>
               <p>Guidelines, documentation, contribution workflows, accessibility, and design–engineering alignment.</p>
             </article>
             <article class="capability">
-              <span class="number">03</span>
               <h3>Product and visual craft</h3>
               <p>B2B and B2C workflows, interface design, prototyping, iconography, and visual systems.</p>
             </article>
           </div>
-          <p class="tools"><span>CORE TOOLS</span> Figma · FigJam · Storybook · Supernova · Notion · HTML/CSS</p>
+          <div class="tools"><div class="project-scale" aria-label="Core tools">FIGMA · FIGJAM · STORYBOOK · SUPERNOVA · NOTION · HTML/CSS</div></div>
         </div>
       </section>
 
@@ -121,47 +194,70 @@
         <div class="section-content experience-list">
           <article class="experience-item">
             <div><h3>Muse Group</h3><p>Design System Designer</p></div>
-            <p class="experience-copy">Design foundations and component libraries across multiple products.</p>
+            <p class="experience-copy">Design system foundations, shared libraries, and automation across six products, including web, mobile, and themed ecosystems.</p>
             <p class="date">2022—Present</p>
           </article>
           <article class="experience-item">
             <div><h3>Cian Group</h3><p>Design System Designer</p></div>
-            <p class="experience-copy">Shared cross-platform foundations from fragmented product libraries.</p>
+            <p class="experience-copy">Built a shared design-system foundation across Web, iOS, and Android from fragmented product libraries.</p>
             <p class="date">2021—2022</p>
           </article>
           <article class="experience-item">
             <div><h3>Karuna</h3><p>Senior Product Designer</p></div>
-            <p class="experience-copy">Multilingual mobile trading product and its design ecosystem.</p>
+            <p class="experience-copy">Owned product design and the design ecosystem for a multilingual iOS and Android trading product with 10M+ downloads.</p>
             <p class="date">2019—2021</p>
           </article>
+          <article class="experience-item">
+            <div><h3>Devim</h3><p>Senior Product Designer</p></div>
+            <p class="experience-copy">Designed fintech web and mobile products, built internal design systems, and mentored junior designers.</p>
+            <p class="date">2017–2019</p>
+          </article>
           <article class="experience-item muted-row">
-            <div><h3>Earlier experience</h3><p>Product, web, graphic design</p></div>
-            <p class="experience-copy">Devim · Group M · independent and agency work.</p>
-            <p class="date">2006—2019</p>
+            <div><h3>Earlier experience</h3><p>Graphic design · web · agency / independent work</p></div>
+            <p class="experience-copy">Group M · independent and agency work.</p>
+            <p class="date">2006–2017</p>
           </article>
         </div>
       </section>
 
-      <section class="section-grid ruled">
+      <section class="section-grid ruled recommendations-section">
         <div class="side-label">RECOMMENDATIONS</div>
-        <div class="section-content quote-grid">
-          <blockquote>
-            <p>“The system has a clear structure and rules.”</p>
-            <footer>Alex Kandaurov · Head of Design at Cian</footer>
-          </blockquote>
-          <blockquote>
-            <p>“Very careful with design structure.”</p>
-            <footer>Andrei Krotov · Senior iOS Developer</footer>
-          </blockquote>
+        <div class="section-content recommendations-content">
+          <div class="quote-grid">
+            <blockquote><p>“Thanks to Vitaly the system has a clear structure and rules, the elements have found their description. I want to note Vitaly's thoughtfulness and structural and flexible thinking.”</p><footer class="recommendation-author"><strong>Alex Kandaurov</strong><span>Head of Design at Cian</span><span>Managed Vitaliy directly</span></footer></blockquote>
+            <blockquote><p>“He was the initiator and creator of the UIKit component library, which the team continued to use even after he left the company. The quality of his solutions is always excellent, moreover, he constantly offers new ideas for improvement.”</p><footer class="recommendation-author"><strong>Alexander Ostrovsky</strong><span>Head of Product Engineering at Karuna</span><span>Managed Vitaliy directly</span></footer></blockquote>
+            <blockquote><p>“Vitaly is very careful with design structure, intelligently breaks design into components and does not do ‘feature for feature's sake’: everything is always justified and conditioned by some problem solved for the client.”</p><footer class="recommendation-author"><strong>Andrei Krotov</strong><span>Senior iOS Developer at Karuna</span><span>Worked with Vitaliy on the same team</span></footer></blockquote>
+          </div>
+          <details class="recommendations-details">
+            <summary><span class="material-symbols-sharp recommendations-disclosure-icon" aria-hidden="true">expand_more</span><span class="recommendations-summary-text">Full recommendations</span></summary>
+            <div class="recommendations-full">
+              <article class="recommendation-full">
+                <div class="recommendation-full-author"><h3>Alex Kandaurov</h3><span>Head of Design at Cian</span><span>Managed Vitaliy directly</span></div>
+                <p>I hired Vitaly at Cian as a System and Principles Designer. Before that, the tasks for the system were distributed among the team. Vitaly was able to take it all on, as well as set up communication with the developers of the system. Thanks to Vitaly the system has a clear structure and rules, the elements have found their description. I want to note Vitaly's thoughtfulness and structural and flexible thinking. He managed to balance between strict adherence to the rules of the system and the exceptions that sometimes had to be made.</p>
+              </article>
+              <article class="recommendation-full">
+                <div class="recommendation-full-author"><h3>Alexander Ostrovsky</h3><span>Head of Product Engineering at Karuna</span><span>Managed Vitaliy directly</span></div>
+                <p>Vitaly worked in the mobile development team, which I led. He has established himself as a strong specialist. He was engaged in the design of mobile applications (iOS and Android). I admire his attention to subtle details and the desire to constantly improve. He was the initiator and creator of the UIKit component library, which the team continued to use even after he left the company. It is always easy to discuss the details of the implementation with Vitaly and he takes feedback constructively. The quality of his solutions is always excellent, moreover, he constantly offers new ideas for improvement. Vitaly easily finds a common language with all team members, which allows him to find efficient and high-quality solutions. I’ll be glad to work with him again.</p>
+              </article>
+              <article class="recommendation-full">
+                <div class="recommendation-full-author"><h3>Andrei Krotov</h3><span>Senior iOS Developer at Karuna</span><span>Worked with Vitaliy on the same team</span></div>
+                <p>I worked with Vitaly, while he was a UX/UI designer, as an iOS developer for a little over a year. Vitaly is very careful with design structure, intelligently breaks design into components and does not do “feature for feature's sake”: everything is always justified and conditioned by some problem solved for the client. Vitaly is maximally loyal to the project, the product and the company as a whole, which is always reflected in his statements and actions. Extremely recommend him as a great designer and employee and I really hope to work shoulder to shoulder again someday.</p>
+              </article>
+              <article class="recommendation-full">
+                <div class="recommendation-full-author"><h3>Mikhail Skvortsov</h3><span>UX/UI Lead at Devim</span><span>Managed Vitaliy directly</span></div>
+                <p>Ok, speaking about Vitaliy, he smart, brave and intelligent. One of best designers ever i met. Sad that we not working together right now and always open to any cooperation with. You will be very lucky if you hire he.</p>
+              </article>
+            </div>
+          </details>
         </div>
       </section>
 
-      <section class="section-grid ruled">
+      <section id="more" class="section-grid ruled">
         <div class="side-label">MORE</div>
         <div class="section-content link-list">
-          <a href="#"><span>Mentoring</span><span>ADPList ↗</span></a>
-          <a href="#"><span>Education</span><span>2002—2010</span></a>
-          <a href="#"><span>Outside work</span><span>Visual experiments ↗</span></a>
+          <a href="https://adplist.org/mentors/vitaliy-kapustyanov" target="_blank" rel="noopener noreferrer"><span>Mentoring</span><span class="link-list-meta"><span>ADPList</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_outward</span></span></a>
+          <a href="./cases/visual-experiments.html"><span>Visual experiments</span><span class="link-list-meta"><span>Outside work</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_forward</span></span></a>
+          <a href="./assets/documents/Vitaliy_Kapustyanov_CV.pdf" target="_blank" rel="noopener noreferrer"><span>CV</span><span class="link-list-meta"><span>PDF</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_outward</span></span></a>
         </div>
       </section>
 
@@ -170,9 +266,9 @@
         <div class="section-content">
           <h2>If my experience looks relevant to your team, get in touch.</h2>
           <div class="contact-links">
-            <a href="mailto:vitaliy.kapustyanov@gmail.com">Email ↗</a>
-            <a href="https://www.linkedin.com/in/vitaliy-kapustyanov/">LinkedIn ↗</a>
-            <a href="https://t.me/etovsevi">Telegram ↗</a>
+            <a href="mailto:vitaliy.kapustyanov@gmail.com"><span>Email</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_outward</span></a>
+            <a href="https://www.linkedin.com/in/vitaliy-kapustyanov/"><span>LinkedIn</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_outward</span></a>
+            <a href="https://t.me/etovsevi"><span>Telegram</span><span class="material-symbols-sharp external-link-icon" aria-hidden="true">arrow_outward</span></a>
           </div>
         </div>
       </section>
@@ -180,7 +276,7 @@
 
     <footer class="footer">
       <span>Vitaliy Kapustyanov</span>
-      <span>Portfolio prototype · 2026</span>
+      <span>Portfolio · 2026</span>
     </footer>
   </div>
 </body>
