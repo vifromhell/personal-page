@@ -116,6 +116,7 @@ The project is intentionally small and dependency-free:
 - `assets/product-work/*` contains cover images for the Product Design Background cards.
 - `assets/visual-experiments/*` contains the illustration, drawing, graphic-design, and photography archive transferred from Notion.
 - `notion-content-map.json` records Notion page/data-source identifiers without credentials.
+- `CNAME` binds GitHub Pages to `kapustianov.com`; `sitemap.xml` and `robots.txt` expose the canonical public URLs to crawlers.
 - `README.md` explains local use, responsive ranges, visual direction, and the proposed Notion integration.
 - IBM Plex and an icon-name-subset of Material Symbols Sharp are loaded remotely from Google Fonts; the site otherwise opens directly from the filesystem and requires no local server or build tooling.
 
@@ -126,7 +127,7 @@ The project is intentionally small and dependency-free:
 - Anchor navigation to Work, About, Experience, and Contact.
 - Desktop sticky side labels and mobile section-header conversion.
 - Hero positioning and professional metadata.
-- Selected design-system work is presented as a responsive three-column desktop grid with nine local full case studies, including four current Muse system cases. Each card omits company-name eyebrows and includes one 14 px plain-text metadata line of short thematic tags describing the work, platforms, and methods without repeating quantitative case details.
+- Selected design-system work is presented as a responsive three-column desktop grid with eight featured case studies, including four current Muse system cases; the research case remains available by direct link but is not featured on the homepage. Each card omits company-name eyebrows and includes one 14 px plain-text metadata line of short thematic tags describing the work, platforms, and methods without repeating quantitative case details.
 - Product Design Background is presented as a responsive four-card grid sourced from the Earlier Product Work database in Notion, with a local long-form page for every project. Its cards use the same bottom-aligned thematic-tag pattern as the design-system work instead of dates or company metadata.
 - Responsive long-form pages for Muse accessibility, multi-product Design System scaling, the Muse icon system, Muse semantic color architecture, the Cian icon system, Cian semantic color system, cross-platform contact system, design-system product analysis, scalable design ecosystem, veterinary ophthalmology tablet app, THRIVE Vet Care mobile app, CRM underwriting system, and fintech Android app.
 - Full case content and supporting images transferred from Notion into semantic HTML and local assets.
@@ -137,7 +138,7 @@ The project is intentionally small and dependency-free:
 ## Current placeholders
 
 - Notion synchronization and a structured local content layer are not implemented; the current content was transferred manually.
-- There is no build pipeline, deployment configuration, or client-side application framework.
+- There is no build pipeline or client-side application framework. The static site is deployed through GitHub Pages with `kapustianov.com` as its canonical domain.
 
 ## Rules for further development
 
