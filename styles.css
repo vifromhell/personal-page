@@ -200,13 +200,13 @@ h3 {
   row-gap: 36px;
 }
 
-.more-cases-details { margin-top: 20px; }
-.more-cases-details summary { display: inline-flex; align-items: center; gap: 12px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 16px; font-weight: 500; }
+.more-cases-details { margin-top: 28px; }
+.more-cases-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
 .more-cases-details summary::-webkit-details-marker { display: none; }
 .more-cases-summary-text { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .18em; transition: text-decoration-color .18s ease; }
 .more-cases-details summary:hover .more-cases-summary-text,
 .more-cases-details summary:focus-visible .more-cases-summary-text { text-decoration-color: currentColor; }
-.more-cases-disclosure-icon { width: 20px; font-size: 20px; transition: transform .18s ease; }
+.more-cases-disclosure-icon { width: 22px; font-size: 22px; transition: transform .18s ease; }
 .more-cases-details[open] .more-cases-disclosure-icon { transform: rotate(180deg); }
 .more-cases-list { margin-top: 16px; }
 
@@ -530,13 +530,13 @@ h3 {
   line-height: 1.25;
 }
 
-.recommendations-details { margin-top: 20px; }
-.recommendations-details summary { display: inline-flex; align-items: center; gap: 12px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 16px; font-weight: 500; }
+.recommendations-details { margin-top: 28px; }
+.recommendations-details summary { display: inline-flex; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
 .recommendations-details summary::-webkit-details-marker { display: none; }
 .recommendations-summary-text { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .18em; transition: text-decoration-color .18s ease; }
 .recommendations-details summary:hover .recommendations-summary-text,
 .recommendations-details summary:focus-visible .recommendations-summary-text { text-decoration-color: currentColor; }
-.recommendations-disclosure-icon { width: 20px; font-size: 20px; transition: transform .18s ease; }
+.recommendations-disclosure-icon { width: 22px; font-size: 22px; transition: transform .18s ease; }
 .recommendations-details[open] .recommendations-disclosure-icon { transform: rotate(180deg); }
 .recommendation-full { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 800px); gap: clamp(32px, 5vw, 80px); padding: 32px 0; border-bottom: 1px solid var(--line); }
 .recommendation-full:last-child { border-bottom: 0; }
@@ -777,14 +777,14 @@ h3 {
   }
 
   .recommendations-details {
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
-  .more-cases-details { margin-top: 8px; }
-  .more-cases-details summary { gap: 4px; padding: 12px 0; }
+  .more-cases-details { margin-top: 16px; }
+  .more-cases-details summary { gap: 16px; padding: 12px 0; }
 
   .recommendations-details summary {
-    gap: 4px;
+    gap: 16px;
     padding: 12px 0;
   }
 
