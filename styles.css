@@ -200,6 +200,16 @@ h3 {
   row-gap: 36px;
 }
 
+.more-cases-details { margin-top: 20px; }
+.more-cases-details summary { display: inline-flex; align-items: center; gap: 12px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 16px; font-weight: 500; }
+.more-cases-details summary::-webkit-details-marker { display: none; }
+.more-cases-summary-text { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .18em; transition: text-decoration-color .18s ease; }
+.more-cases-details summary:hover .more-cases-summary-text,
+.more-cases-details summary:focus-visible .more-cases-summary-text { text-decoration-color: currentColor; }
+.more-cases-disclosure-icon { width: 20px; font-size: 20px; transition: transform .18s ease; }
+.more-cases-details[open] .more-cases-disclosure-icon { transform: rotate(180deg); }
+.more-cases-list { margin-top: 16px; }
+
 .project-card {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -769,6 +779,9 @@ h3 {
   .recommendations-details {
     margin-top: 8px;
   }
+
+  .more-cases-details { margin-top: 8px; }
+  .more-cases-details summary { gap: 4px; padding: 12px 0; }
 
   .recommendations-details summary {
     gap: 4px;
