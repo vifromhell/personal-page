@@ -4,6 +4,8 @@
   --muted: #6d6c66;
   --line: #c9c7bf;
   --soft: #e7e5de;
+  --body-copy: #343430;
+  --paper: #f3f2ed;
   --max: 1680px;
   --pad: clamp(20px, 3vw, 48px);
   --label: 168px;
@@ -12,6 +14,20 @@
 }
 
 * { box-sizing: border-box; }
+
+:root { color-scheme: light dark; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1a;
+    --ink: #f0eee8;
+    --muted: #87857e;
+    --line: #363530;
+    --soft: #292925;
+    --body-copy: #d7d5ce;
+    --paper: #1c1c1a;
+  }
+}
 
 .material-symbols-sharp {
   font-family: "Material Symbols Sharp" !important;
@@ -165,7 +181,7 @@ h3 {
   max-width: 760px;
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.32;
-  color: #343430;
+  color: var(--body-copy);
 }
 
 .meta-row {

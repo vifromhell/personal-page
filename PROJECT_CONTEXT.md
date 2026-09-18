@@ -133,6 +133,7 @@ The project is intentionally small and dependency-free:
 - Full case content and supporting images transferred from Notion into semantic HTML and local assets.
 - Capabilities, experience, four full-length recommendations sourced from Notion, mentoring, a local Visual experiments archive, a downloadable CV, contact, and footer content. Recommendations form a compact three-column desktop row of selected excerpts using 18–22 px regular text, with larger author names and roles; they stack vertically below 1200 px. A native disclosure below the row reveals the complete text, author, role, and working relationship for all four recommendations without JavaScript.
 - CSS custom properties for the core palette, dimensions, and spacing.
+- A system-aware dark theme using the same monochrome editorial palette; it follows the visitor's `prefers-color-scheme` setting without adding a separate control.
 - Notion source identifiers separated into a dedicated mapping file.
 
 ## Current placeholders

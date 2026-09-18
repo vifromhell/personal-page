@@ -55,7 +55,7 @@
 .case-lead {
   max-width: 880px;
   margin-bottom: 0;
-  color: #343430;
+  color: var(--body-copy);
   font-size: clamp(20px, 2.1vw, 32px);
   line-height: 1.34;
 }
