@@ -184,6 +184,15 @@ h3 {
   color: var(--body-copy);
 }
 
+.hero-professional-subtitle {
+  max-width: 760px;
+  margin: -16px 0 20px;
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--body-copy);
+}
+
 .meta-row {
   margin-top: clamp(40px, 7vw, 80px);
   display: flex;
@@ -737,6 +746,11 @@ h3 {
 
   .lead {
     font-size: 20px;
+  }
+
+  .hero-professional-subtitle {
+    margin: -12px 0 16px;
+    font-size: 18px;
   }
 
   .meta-row {
