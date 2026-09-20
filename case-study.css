@@ -383,6 +383,17 @@
   column-gap: 24px;
 }
 
+.experiment-grid--uniform {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  columns: unset;
+  gap: 24px;
+}
+
+.experiment-grid--uniform .experiment-item {
+  margin: 0;
+}
+
 .experiment-item {
   display: inline-block;
   width: 100%;
@@ -412,10 +423,12 @@
 @media (max-width: 767px) {
   .experiment-content > h2 { margin-bottom: 32px; }
   .experiment-grid { columns: 1; }
+  .experiment-grid--uniform { grid-template-columns: 1fr; }
   .experiment-item { margin-bottom: 16px; }
   .experiment-series + .experiment-series { margin-top: 64px; }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .experiment-grid { columns: 2; }
+  .experiment-grid--uniform { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
