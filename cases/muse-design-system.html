@@ -89,6 +89,8 @@
 <p><strong>Shared foundations</strong> — primitives, semantic rules, shared assets and baseline Web/App components.</p>
 <p><strong>Product adaptation</strong> — each product has its own Core, mapping the shared primitives to product-specific semantics and visual parameters.</p>
 <p><strong>Product UI</strong> — product Web/App libraries reuse Foundation components and add domain-specific components where needed.</p>
+<p>The shared Foundation initially used a monochrome, opacity-based theme. This kept it visually neutral and made system components easy to distinguish from product libraries, whose components often looked similar because the products shared many visual principles.</p>
+<p>As the Foundation evolved, new requirements — status colors, focus states and more complex component combinations — revealed the limits of the original model. This did not make the initial decision wrong; it showed where the shared visual language needed to expand while preserving its neutrality. The principle remained stable, while the implementation continued to adapt to clearer product and platform needs.</p>
 <figure class="case-figure"><picture><source media="(prefers-color-scheme: dark) and (max-width: 767px)" srcset="../assets/cases/muse-design-system/dark/02-mobile-dark.png" /><source media="(prefers-color-scheme: dark)" srcset="../assets/cases/muse-design-system/dark/02-dark.png" /><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/02-mobile.webp" width="720" height="1902" /><img src="../assets/cases/muse-design-system/02.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/02-960.webp 960w, ../assets/cases/muse-design-system/02-1600.webp 1600w, ../assets/cases/muse-design-system/02.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="2640" decoding="async" /></picture></figure>
 <p><strong>Principle:</strong> share what is stable; keep variation where it belongs.</p>
         </div>
@@ -97,8 +99,8 @@
         <div class="side-label">ARCHITECTURE</div>
         <div class="case-copy">
           <h2>04 — Shared where it helps, separate where it doesn’t</h2>
-          <p>We initially explored keeping simple Web and App components together. In practice, visual similarity was not enough: the platforms differed in control dimensions, clickable areas, modal patterns, navigation bars, cells and interaction behaviour.</p>
-<p>So Web and App Foundations stayed separate while sharing tokens, semantics, assets and organisational logic.</p>
+          <p>We initially explored keeping simple Web and App components together. After discussing the idea with developers, it became clear that visual similarity was not enough: the platforms had little technical overlap and differed in control dimensions, clickable areas, modal patterns, navigation bars, cells and interaction behaviour.</p>
+<p>A single component library would have created a bottleneck for both platforms. So Web and App Foundations stayed separate while sharing tokens, semantics, assets and organisational logic, and we evolved them in parallel where that made sense.</p>
 <p>The same principle applies at product level. Ultimate Guitar, for example, needs control dimensions and icon-to-touch-area combinations that differ from the shared Button model. We could expose enough properties to support every combination, but that would make the common API harder for everyone to use.</p>
 <p><strong>A Foundation component should not absorb every product variation just because it technically can.</strong></p>
 <figure class="case-figure"><picture><source media="(prefers-color-scheme: dark) and (max-width: 767px)" srcset="../assets/cases/muse-design-system/dark/03-mobile-dark.png" /><source media="(prefers-color-scheme: dark)" srcset="../assets/cases/muse-design-system/dark/03-dark.png" /><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/03-mobile.webp" width="720" height="1294" /><img src="../assets/cases/muse-design-system/03.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/03-960.webp 960w, ../assets/cases/muse-design-system/03-1600.webp 1600w, ../assets/cases/muse-design-system/03.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1822" decoding="async" /></picture></figure>
@@ -129,11 +131,13 @@
 <section class="section-grid ruled case-section">
         <div class="side-label">GOVERNANCE</div>
         <div class="case-copy">
-          <h2>07 — Supporting predictable implementation</h2>
-          <p>I worked with a developer to align Figma and Storybook around the same component taxonomy, so design and implementation used shared names and boundaries: <strong>Actions · Inputs · Navigation · Feedback · Overlay · Data Display · Patterns</strong>.</p>
-<p>Figma component pages follow a predictable structure: <strong>Component Meta → Main components → Parts → Usage</strong>.</p>
-<p>Documentation stayed deliberately lean: it supports decisions and intended behaviour, while inspectable implementation details live in the product and are resolved in collaboration.</p>
-<p><strong>The result was less translation between design and development, not more documentation to maintain.</strong></p>
+          <h2>07 — Making the system maintainable</h2>
+          <p>I worked with a developer to align Figma and Storybook around the same component taxonomy: <strong>Actions · Inputs · Navigation · Feedback · Overlay · Data Display · Patterns</strong>.</p>
+<p>Figma component pages use the same predictable structure: <strong>Component Meta → Main components → Parts → Usage</strong>.</p>
+<p>I also adjusted Figma components to make implementation choices explicit: variants and states are visible rather than hidden behind Figma-specific controls, and component structure follows developer needs where possible.</p>
+<p>We separated reusable components from higher-level patterns. For example, <strong>Dialog</strong> can represent a Modal Window or Bottom Sheet depending on the platform, while keeping shared behavioural principles.</p>
+<p>We also reduced documentation deliberately: detailed guidance remains for abstract principles, while component behaviour and corner cases are resolved together during implementation. Designers get concise Usage guidance in Figma; developers get the implemented component in Storybook.</p>
+<p><strong>We document decisions and behaviour, not inspectable values.</strong></p>
         </div>
       </section>
 <section class="section-grid ruled case-section">
@@ -154,7 +158,7 @@
           <h2>Outcome</h2>
           <p><strong>System:</strong> six products share one underlying architecture while retaining product-specific UI and domain patterns.</p>
 <p><strong>Team:</strong> the Design System team moved from reactive product support toward building and evolving a shared internal product.</p>
-<p><strong>My contribution:</strong> co-architected the shared system; authored the semantic color architecture, Image Foundation, monochrome Foundation theme and most Foundation components; co-developed the library structure; and became the primary Figma maintainer across the ecosystem.</p>
+<p><strong>My contribution:</strong> co-architected the shared system; authored the semantic color architecture, Image Foundation, monochrome Foundation theme and most Foundation components; co-developed the library structure and documentation model; and became the primary Figma maintainer across the ecosystem.</p>
 <p><strong>Scale:</strong> 4,300+ component and variant entities across the current Web, App and Image Foundation files.</p>
 <figure class="case-figure"><picture><source media="(prefers-color-scheme: dark) and (max-width: 767px)" srcset="../assets/cases/muse-design-system/dark/06-mobile-dark.png" /><source media="(prefers-color-scheme: dark)" srcset="../assets/cases/muse-design-system/dark/06-dark.png" /><source media="(max-width: 767px)" srcset="../assets/cases/muse-design-system/06-mobile.webp" width="720" height="1484" /><img src="../assets/cases/muse-design-system/06.webp" alt="Project diagram" loading="lazy" srcset="../assets/cases/muse-design-system/06-960.webp 960w, ../assets/cases/muse-design-system/06-1600.webp 1600w, ../assets/cases/muse-design-system/06.webp 2400w" sizes="(max-width: 767px) 100vw, 75vw" width="2400" height="1432" decoding="async" /></picture></figure>
 <blockquote><p>Figma counts variants as individual components. This number describes the scale of the maintained libraries, not 4,300 unique UI component families.</p></blockquote>
